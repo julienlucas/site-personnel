@@ -2,19 +2,13 @@
 import Hero from "./components/ui/hero";
 import SocialStats from "./components/ui/social-stats";
 import YouTubeVideos from "./components/ui/youtube-videos";
-import { useState } from "react";
 import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "./components/ui/accordion";
-import { Button } from "./components/ui/button";
-import { Input } from "./components/ui/input";
-import { Textarea } from "./components/ui/textarea";
-import { Label } from "./components/ui/label";
 import {
   Card,
   CardContent,
@@ -23,60 +17,9 @@ import {
   CardDescription,
 } from "./components/ui/card";
 import Certifications from "./components/ui/certifications";
+import ContactForm from "./components/ui/form";
 
 export default function Home() {
-  const [formData, setFormData] = useState({
-    email: "",
-    name: "",
-    company: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-    try {
-      await emailjs.send(
-        `${process.env.NEXT_PUBLIC_MAILJS_SERVICE_KEY}`,
-        "template_i1de0jq",
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          company: formData.company || "Non spécifiée",
-          subject: formData.subject,
-          message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
-      );
-
-      setSubmitStatus("success");
-      setFormData({
-        email: "",
-        name: "",
-        company: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Erreur:", error);
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
     <main className="max-w-[1100px] min-h-screen -mt-15 mx-auto py-30 mx-auto border border-zinc-200 border-t-0 border-b-0">
@@ -328,81 +271,7 @@ export default function Home() {
           </CardDescription>
         </CardHeader>
         <CardContent className="py-6">
-          <form onSubmit={handleSubmit}>
-            <div className="space-y-4">
-              {/* Email */}
-              <Label>Votre adresse email</Label>
-              <Input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-
-              {/* Name */}
-              <Label>Votre nom et prénom</Label>
-              <Input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-
-              {/* Name */}
-              <Label>Le nom de votre entreprise</Label>
-              <Input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                required
-              />
-
-              {/* Subject */}
-              <Label>Sujet</Label>
-              <Input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-              />
-
-              {/* Message */}
-              <Label>Votre méssage</Label>
-              <Textarea
-                name="message"
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                required
-              />
-              <Button
-                variant="default"
-                size="xl"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Envoi en cours..." : "Envoyer maintenant"}
-              </Button>
-              {submitStatus === "success" && (
-                <p className="text-green-600 text-sm">
-                  Message envoyé avec succès !
-                </p>
-              )}
-              {submitStatus === "error" && (
-                <p className="text-red-600 text-sm">
-                  Erreur lors de l'envoi. Veuillez réessayer.
-                </p>
-              )}
-            </div>
-          </form>
+          <ContactForm />
         </CardContent>
       </Card>
     </main>
