@@ -30,7 +30,7 @@ export default function Certifications() {
           >
             <Image
               src="/deeplearning.png"
-              alt="Deeplearning"
+              alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
               fill
               className="object-cover"
             />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Gabarito } from "next/font/google";
 import Navigation from "./components/ui/navigation";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -34,6 +35,24 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${gabarito.variable} font-sans antialiased`}
       >
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-LZL71FQRRE`}
+          strategy="afterInteractive"
+        />
+        <Script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-LZL71FQRRE', {
+            page_path: window.location.pathname,
+          });
+        `,
+          }}
+          strategy="afterInteractive"
+        />
         <Navigation />
         <div className="max-w-[1100px] -mb-13 mx-auto border border-zinc-200 border-t-0 border-b-0 px-4">
           {children}

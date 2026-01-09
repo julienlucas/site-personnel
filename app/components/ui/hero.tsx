@@ -11,13 +11,13 @@ export default function Hero() {
       {/* <Card className="absolute right-16 -mt-14 bg-white border-gray-200 p-2 border w-14 h-14 rounded-xl flex justify-center align-center float-animation">
         <Image
           src="/mistral.svg"
-          alt="Julien Lucas"
+          alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
           fill
           className="object-cover"
         />
       </Card> */}
       {/* <Card className="absolute z-30 right-10 bg-white border-gray-200 p-2 mt-20 border w-14 h-14 rounded-xl flex justify-center align-center float-animation">
-        <Image src="/hf.png" alt="Julien Lucas" fill className="object-cover" />
+        <Image src="/hf.png" alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance" fill className="object-cover" />
       </Card> */}
       <Card className="border-none grid md:grid-cols-2 grid-cols-1 gap-5">
         <CardHeader className="p-1 px-2">
@@ -25,7 +25,7 @@ export default function Hero() {
             {/* <Card className="absolute border-gray-200 p-2 -ml-8 -mt-14 border w-14 h-14 rounded-xl flex justify-center align-center float-animation">
               <Image
                 src="/mistral.svg"
-                alt="Julien Lucas"
+                alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                 fill
                 className="object-cover"
               />
@@ -33,7 +33,7 @@ export default function Hero() {
             <Card className="absolute bg-white border-gray-200 p-2 -ml-16 mt-20 border w-14 h-14 rounded-xl flex justify-center align-center float-animation">
               <Image
                 src="/hf.png"
-                alt="Julien Lucas"
+                alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                 fill
                 className="object-cover"
               />
@@ -63,7 +63,7 @@ export default function Hero() {
           <Card className="border-none h-54 h-74 flex justify-center align-center">
             <Image
               src="/julienlucas.webp"
-              alt="Julien Lucas"
+              alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
               fill
               className="object-cover rounded-lg object-top"
             />

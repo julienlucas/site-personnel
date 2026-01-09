@@ -135,7 +135,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/shootingpro.jpeg"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-cover"
                   />
@@ -157,7 +157,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/smartch.jpeg"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-cover"
                   />
@@ -179,7 +179,7 @@ export default function Home() {
                 <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/corum.svg"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-contain p-0.5"
                   />
@@ -199,7 +199,7 @@ export default function Home() {
                 <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/sewan.png"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-contain p-0.5"
                   />
@@ -220,7 +220,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/reezocar.png"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-cover"
                   />
@@ -240,7 +240,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/iziwork.jpg"
-                    alt="Julien Lucas"
+                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
                     fill
                     className="object-cover"
                   />
