@@ -4,6 +4,7 @@ import SocialStats from "./components/ui/social-stats";
 import YouTubeVideos from "./components/ui/youtube-videos";
 import { useState } from "react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 import {
   Accordion,
   AccordionContent,
@@ -38,31 +39,28 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
-
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await emailjs.send(
+        `${process.env.NEXT_PUBLIC_MAILJS_SERVICE_KEY}`,
+        "template_i1de0jq",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company || "Non spécifiée",
+          subject: formData.subject,
+          message: formData.message,
         },
-        body: JSON.stringify(formData),
+        process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY
+      );
+
+      setSubmitStatus("success");
+      setFormData({
+        email: "",
+        name: "",
+        company: "",
+        subject: "",
+        message: "",
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({
-          email: "",
-          name: "",
-          company: "",
-          subject: "",
-          message: "",
-        });
-        window.open(data.mailtoLink, "_blank");
-      } else {
-        setSubmitStatus("error");
-      }
     } catch (error) {
       console.error("Erreur:", error);
       setSubmitStatus("error");
@@ -395,7 +393,7 @@ export default function Home() {
               </Button>
               {submitStatus === "success" && (
                 <p className="text-green-600 text-sm">
-                  Message envoyé avec succès ! Votre client email s'est ouvert.
+                  Message envoyé avec succès !
                 </p>
               )}
               {submitStatus === "error" && (
