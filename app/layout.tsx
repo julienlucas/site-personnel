@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Gabarito } from "next/font/google";
 import Navigation from "./components/ui/navigation";
+import ContactBubble from "./components/ui/contact-bubble";
 import Script from "next/script";
 import "./globals.css";
 
@@ -54,7 +55,8 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Navigation />
-        <div className="max-w-[1100px] -mb-13 mx-auto border border-zinc-200 border-t-0 border-b-0 px-4">
+        <ContactBubble />
+        <div className="max-w-[1200px] -mb-13 mx-auto border-t-0 border-b-0 px-4">
           {children}
         </div>
         <footer className="mx-auto border-t border-zinc-200 mt-auto">

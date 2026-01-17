@@ -3,11 +3,10 @@ import Image from "next/image";
 
 export default function Certifications() {
   return (
-    <Card className="relative border-none pt-8">
-      <div className="absolute top-0 left-6 w-5 h-5 bg-blue-950" />
+    <Card className="relative px-8 border-none pb-8">
       <CardHeader>
-        <CardTitle variant="h2" className="text-center max-w-[360px] mx-auto">
-          Certifié IA Agentique, RAG et PyTorch
+        <CardTitle variant="h3-card" className="text-center max-w-[460px] mx-auto -mb-3">
+          Certifié IA Agentique, RAG et Deeplearning PyTorch
         </CardTitle>
       </CardHeader>
       <CardContent className="mx-auto grid grid-cols-2 max-w-[320px] w-full mt-3">

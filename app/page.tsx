@@ -1,8 +1,9 @@
 "use client";
 import Hero from "./components/ui/hero";
 import SocialStats from "./components/ui/social-stats";
-import YouTubeVideos from "./components/ui/youtube-videos";
+import { Button } from "./components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -17,23 +18,22 @@ import {
   CardDescription,
 } from "./components/ui/card";
 import Certifications from "./components/ui/certifications";
-import ContactForm from "./components/ui/form";
+import ContactForm from "./components/ui/contact-form";
 
 export default function Home() {
 
   return (
-    <main className="max-w-[1100px] min-h-screen -mt-15 mx-auto py-30 mx-auto border border-zinc-200 border-t-0 border-b-0">
+    <main className="max-w-[1100px] min-h-screen mt-3 mb-16 mx-auto pb-0 mx-auto border border-zinc-200 rounded-lg">
       <Hero />
       <SocialStats />
-      <Card className="relative border rounded-none -mt-6 py-10 pb-18 border border-zinc-200 border-l-0 border-r-0 border-b-0">
-        <div className="absolute top-0 left-6 w-5 h-5 bg-blue-950" />
+      <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
         <CardHeader>
-          <CardTitle variant="h2">Centres d'Intérêt</CardTitle>
+          <CardTitle variant="h3-card">Centres d'Intérêt</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🤖</div>
-            <CardTitle variant="h3">
+            <CardTitle variant="h3" className="pt-1">
               Intelligence Artificielle appliquée
             </CardTitle>
             <CardDescription>
@@ -43,15 +43,14 @@ export default function Home() {
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🧠</div>
-            <CardTitle variant="h3">Apprentissage profond</CardTitle>
+            <CardTitle variant="h3" className="pt-1">Apprentissage profond</CardTitle>
             <CardDescription>
-              Création et finetuning efficace de modèles en NLP et Computer
-              Vision.
+              Création et finetuning de modèles en NLP et Computer Vision.
             </CardDescription>
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">⚙️</div>
-            <CardTitle variant="h3">Développement "classique"</CardTitle>
+            <CardTitle variant="h3" className="pt-1">Développement "classique"</CardTitle>
             <CardDescription>
               Architecture logicielle et développement de solutions.
             </CardDescription>
@@ -59,13 +58,72 @@ export default function Home() {
         </CardContent>
       </Card>
 
+      <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
+        <CardHeader>
+          <CardTitle variant="h3-card">Use cases</CardTitle>
+        </CardHeader>
+        <CardContent className="grid md:grid-cols-2 grid-cols-1 gap-4 px-6 pb-6 rounded-lg overflow-hidden">
+          <Link href="/use-cases/agentic-rag" className="block">
+            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
+              <img
+                src="/docchat.jpg"
+                alt="Agentic RAG"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <CardTitle variant="h3" className="text-center px-6 pt-4">
+                RAG multi-agentique à forte pertinence et sans halucinations pour docs techniques
+              </CardTitle>
+              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+            </Card>
+          </Link>
+          <Link href="/use-cases/mm-rag" className="block">
+            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
+              <img
+                src="/styleanalyer.jpg"
+                alt="MM-RAG Fashion"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <CardTitle variant="h3" className="text-center px-6 pt-4">
+                Recommandation de vêtements et analyse stylistique avec RAG multimodal
+              </CardTitle>
+              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+            </Card>
+          </Link>
+          <Link href="/use-cases/pneumodiag" className="block">
+            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
+              <img
+                src="/pneumodiag.jpg"
+                alt="PneumoDiag"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <CardTitle variant="h3" className="text-center px-6 pt-4 max-w-lg mx-auto">
+                Diagnostiquer les pneumonies et leur degrés de viralité
+              </CardTitle>
+              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+            </Card>
+          </Link>
+          <Link href="/use-cases/fakefinder" className="block">
+            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
+              <img
+                src="/fakefinder.jpg"
+                alt="FakeFinder"
+                className="w-full h-full object-cover rounded-lg"
+              />
+              <CardTitle variant="h3" className="text-center px-6 pt-4 max-w-md mx-auto">
+                Détection de fakes Nano Banana Pro et de modèles de diffusion
+              </CardTitle>
+              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+            </Card>
+          </Link>
+        </CardContent>
+      </Card>
+
       <Card
         id="a-propos"
-        className="relative border rounded-none -mt-6 py-10 pb-18 border border-zinc-200 border-l-0 border-r-0 border-b-0"
+        className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0"
       >
-        <div className="absolute top-0 left-6 w-5 h-5 bg-blue-950" />
         <CardHeader>
-          <CardTitle variant="h2">Expériences</CardTitle>
+          <CardTitle variant="h3-card">Expériences professionnelles</CardTitle>
         </CardHeader>
         <CardContent className="px-6 pb-6 max-w-xl">
           <div className="relative">
@@ -204,11 +262,10 @@ export default function Home() {
       {/* FAQ */}
       <Card
         id="questions"
-        className="relative border rounded-none -mt-6 py-10 pb-12 border border-zinc-200 border-l-0 border-r-0"
+        className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0"
       >
-        <div className="absolute top-0 left-6 w-5 h-5 bg-blue-950" />
         <CardHeader>
-          <CardTitle variant="h2">Questions réponses</CardTitle>
+          <CardTitle variant="h3-card">Questions réponses</CardTitle>
         </CardHeader>
         <Accordion
           type="multiple"
@@ -222,15 +279,15 @@ export default function Home() {
             <AccordionContent>
               <p>
                 Académique et IA appliquée concrête. Avec une approche de
-                l'entraînement IA centré sur la rigueur de la donnée. J'ai développé une
-                spécialité en IA agentique, RAG et apprentissage profond en
-                NLP et Computer Vision dans les réseaux neuronaux
+                l'entraînement IA centré sur la rigueur de la donnée. J'ai
+                développé une spécialité en IA agentique, RAG et apprentissage
+                profond en NLP et Computer Vision dans les réseaux neuronaux
                 convolutifs.
                 <br /> Ceci avec la panoplies des techniques de finetuning de
                 modèles.
                 <br />
-                Et l'optimisation réelle des coûts, la latence des modèles et de la rapidité des
-                apprentisages (grâce aux outils prévus pour).
+                Et l'optimisation réelle des coûts, la latence des modèles et de
+                la rapidité des apprentisages (grâce aux outils prévus pour).
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -241,9 +298,11 @@ export default function Home() {
             </AccordionTrigger>
             <AccordionContent>
               <p>
-                Développement d'agents, de la NLP, de la computer vision et
-                des modèles IA finetunés et optimisés pour vos cas d'usages. Le
-                tout avec des interfaces front-end soignées.<br/><br/>
+                Développement d'agents, de la NLP, de la computer vision et des
+                modèles IA finetunés et optimisés pour vos cas d'usages. Le tout
+                avec des interfaces front-end soignées.
+                <br />
+                <br />
                 Services :
               </p>
               <ul className="list-disc pl-5 pt-2">
@@ -261,16 +320,9 @@ export default function Home() {
       {/* Contact Form */}
       <Card
         id="contact"
-        className="relative border rounded-none mt-6 py-10 pb-12 border border-zinc-200 border-l-0 border-r-0 border-b-0"
+        className="relative md:px-8 px-1 border rounded-none mt-6 py-2 pb-8 border-none"
       >
-        <div className="absolute top-0 left-6 w-5 h-5 bg-blue-950" />
-        <CardHeader>
-          <CardTitle variant="h2">N'hésitez pas à me contacter</CardTitle>
-          <CardDescription>
-            Remplissez le formulaire ci-dessous pour me contacter.
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="py-6">
+        <CardContent className="max-w-3xl mx-auto">
           <ContactForm />
         </CardContent>
       </Card>

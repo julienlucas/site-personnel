@@ -39,7 +39,7 @@ export default function SocialStats() {
   };
 
   return (
-    <section className="relative py-12 pb-20 w-full border border-zinc-200 border-l-0 border-r-0 border-b-0">
+    <section className="relative py-6 pb-12 w-full border border-zinc-200 border-l-0 border-r-0 border-b-0">
       <div className="max-w-[1100px] mx-auto">
         <CardTitle variant="h2" className="text-center">
           Mes réseaux sociaux

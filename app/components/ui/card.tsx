@@ -1,5 +1,6 @@
-import * as React from "react"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -8,13 +9,13 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg py-4 border border-gray-300 text-card-foreground",
+      "rounded-lg border border-zinc-200 text-card-foreground shadow-sm",
       className
     )}
     {...props}
   />
-))
-Card.displayName = "Card"
+));
+Card.displayName = "Card";
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -22,22 +23,24 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("relative flex flex-col space-y-1.5 p-6 -mb-6", className)}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
     {...props}
   />
-))
-CardHeader.displayName = "CardHeader"
+));
+CardHeader.displayName = "CardHeader";
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement> & { variant?: "h1" | "h2" | "h3" }
+  React.HTMLAttributes<HTMLHeadingElement> & {
+    variant?: "h1" | "h2" | "h3" | "h3-card" | "h4";
+  }
 >(({ className, variant = "h3", ...props }, ref) => {
   if (variant === "h1") {
     return (
       <h1
         ref={ref}
         className={cn(
-          "text-6xl font-bold tracking-tight text-foreground mb-[1rem] leading-13",
+          "text-5xl font-bold tracking-tight text-black pt-8 mb-[0rem] leading-14",
           className
         )}
         {...props}
@@ -50,9 +53,36 @@ const CardTitle = React.forwardRef<
       <h2
         ref={ref}
         className={cn(
-          "md:text-3xl text-2xl font-bold tracking-tight mb-[1rem] leading-10",
+          "text-3xl font-bold tracking-tight text-black pt-4 mb-[1rem] leading-10",
           className
         )}
+        {...props}
+      />
+    );
+  }
+
+  if (variant === "h4") {
+    return (
+      <h4
+        ref={ref}
+        className={cn(
+          "text-2xl font-semibold tracking-tight text-black pt-4 mb-[.5rem] leading-10",
+          className
+        )}
+        {...props}
+      />
+    );
+  }
+
+  if (variant === "h3-card") {
+    return (
+      <h3
+        ref={ref}
+        className={cn(
+          "text-sm uppercase font-semibold tracking-tight bg-black text-white w-fit px-4 py-[.02rem] mt-10 mb-[1rem] leading-8",
+          className
+        )}
+        style={{ fontFamily: "'IBM Plex Mono', monospace" }}
         {...props}
       />
     );
@@ -62,57 +92,33 @@ const CardTitle = React.forwardRef<
     <h3
       ref={ref}
       className={cn(
-        "text-xl font-semibold tracking-tight mb-[0.7-rem] leading-7",
+        "text-2xl font-semibold tracking-tight text-black pt-4 mb-[1rem] leading-7",
         className
       )}
       {...props}
     />
   );
 });
-CardTitle.displayName = "CardTitle"
+CardTitle.displayName = "CardTitle";
 
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLHeadingElement> & { variant?: "h2" }
->(({ className, variant = "h2", ...props }, ref) => {
-  if (variant === "h2") {
-    return (
-      <p
-        ref={ref}
-        className={cn("relative text-muted-foreground", className)}
-        {...props}
-      />
-    )
-  }
-
-  return (
-    <p
-      ref={ref}
-      className={cn("relative text-muted-foreground", className)}
-      {...props}
-    />
-  )
-})
-CardDescription.displayName = "CardDescription"
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p ref={ref} className={cn("text-lg text-zinc-600", className)} {...props} />
+));
+CardDescription.displayName = "CardDescription";
 
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
-))
-CardContent.displayName = "CardContent"
-
-const CardFooter = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
+    className={cn("p-6 pt-0 text-zinc-700", className)}
     {...props}
   />
-))
-CardFooter.displayName = "CardFooter"
+));
+CardContent.displayName = "CardContent";
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, CardHeader, CardTitle, CardDescription, CardContent };
