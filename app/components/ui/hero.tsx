@@ -15,8 +15,8 @@ export default function Hero() {
               Bonjour, je suis Julien Lucas
             </CardTitle>
             <CardDescription className="mb-4">
-              Passionné d'IA appliquée, d'apprentissage profond, développeur senior 5ans d'exépriences et
-              créateur de contenus où je vulgarise l'Intelligence Artificielle.
+              Passionné d'IA appliquée, d'apprentissage profond et développeur senior 5 ans d'expériences et
+              aussi créateur de contenus où je vulgarise l'Intelligence Artificielle.
             </CardDescription>
             <Button
               onClick={() => {

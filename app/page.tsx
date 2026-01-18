@@ -33,7 +33,7 @@ export default function Home() {
         <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🤖</div>
-            <CardTitle variant="h3" className="pt-1">
+            <CardTitle variant="h3-b" className="pt-1">
               Intelligence Artificielle appliquée
             </CardTitle>
             <CardDescription>
@@ -43,14 +43,14 @@ export default function Home() {
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🧠</div>
-            <CardTitle variant="h3" className="pt-1">Apprentissage profond</CardTitle>
+            <CardTitle variant="h3-b" className="pt-1">Apprentissage profond</CardTitle>
             <CardDescription>
               Création et finetuning de modèles en NLP et Computer Vision.
             </CardDescription>
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">⚙️</div>
-            <CardTitle variant="h3" className="pt-1">Développement "classique"</CardTitle>
+            <CardTitle variant="h3-b" className="pt-1">Développement "classique"</CardTitle>
             <CardDescription>
               Architecture logicielle et développement de solutions.
             </CardDescription>
@@ -70,7 +70,7 @@ export default function Home() {
                 alt="Agentic RAG"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3" className="text-center px-6 pt-4">
+              <CardTitle variant="h3-b" className="text-center px-6 pt-4">
                 RAG multi-agentique à forte pertinence et sans halucinations pour docs techniques
               </CardTitle>
               <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
@@ -83,7 +83,7 @@ export default function Home() {
                 alt="MM-RAG Fashion"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3" className="text-center px-6 pt-4">
+              <CardTitle variant="h3-b" className="text-center px-6 pt-4">
                 Recommandation de vêtements et analyse stylistique avec RAG multimodal
               </CardTitle>
               <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
@@ -96,7 +96,7 @@ export default function Home() {
                 alt="PneumoDiag"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3" className="text-center px-6 pt-4 max-w-lg mx-auto">
+              <CardTitle variant="h3-b" className="text-center px-6 pt-4 max-w-lg mx-auto">
                 Diagnostiquer les pneumonies et leur degrés de viralité
               </CardTitle>
               <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
@@ -109,7 +109,7 @@ export default function Home() {
                 alt="FakeFinder"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3" className="text-center px-6 pt-4 max-w-md mx-auto">
+              <CardTitle variant="h3-b" className="text-center px-6 pt-4 max-w-md mx-auto">
                 Détection de fakes Nano Banana Pro et de modèles de diffusion
               </CardTitle>
               <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>

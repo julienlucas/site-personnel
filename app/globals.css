@@ -58,13 +58,20 @@ button {
   cursor: pointer;
 }
 
-strong {
-  @apply font-medium;
+p,
+ul li,
+ol li {
+  @apply text-zinc-600 text-lg leading-6;
 }
 
-p, ul li, ol {
-  @apply font-normal text-zinc-600 text-base;
+li span {
+  @apply bg-gray-600 text-white px-1 py-0.5;
 }
+
+li strong {
+  @apply text-black font-bold;
+}
+
 
 #hero h1 {
   @apply text-3xl font-medium leading-10;
