@@ -44,7 +44,7 @@ export default function Hero() {
         </CardHeader>
       </Card>
       <CardTitle variant="h2" className="md:text-[44px] text-3xl leading-[1.1] text-center py-10 pb-4 w-full mx-auto max-w-3xl">
-        Je vous aide à automatiser votre entreprise et à gagner avec l'IA
+        Je vous aide à automatiser votre entreprise
       </CardTitle>
     </section>
   );
