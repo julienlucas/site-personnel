@@ -10,8 +10,8 @@ export default function MmRag() {
       <ScrollTopOnMount />
       <Card className="border">
         <CardHeader>
-          <CardTitle variant="h1" className="text-center w-full max-w-4xl mx-auto mt-8">
-            RAG multimodal de recommandation de vêtements et anlayse stylistique
+          <CardTitle variant="h1" className="text-center w-full max-w-5xl mx-auto mt-8">
+            MM-RAG de recommandation de vêtements avec prix et liens et analyse stylistique
           </CardTitle>
           <img
             src="/styleanalyer.jpg"
@@ -35,9 +35,8 @@ export default function MmRag() {
             Le challenge
           </CardTitle>
           <CardTitle variant="h3" className="font-medium">
-            Avoir un système de recommandation MM-RAG de tenues au style
-            similaires à l'image uploadée (sans entraînements de modèl
-            donc)
+            Avoir un système IA d'analyse stylistique + MM-RAG recommandation de tenues au style
+            similaires à l'image uploadée, avec prix et liens
           </CardTitle>
           <ul className="list-disc list-inside mb-4 space-y-4">
             <li>
@@ -80,9 +79,9 @@ export default function MmRag() {
             </li>
             <li>
               <strong>
-                📊 <span>la latence est un peu longue c'est un point faible</span>.</strong> D'où la nécéssité d'avoir un GPU NVidia minimal sur l'hébergement final en prod de l'application.
+                📊 <span>Latence correct d'environ 10-15 secondes</span>.</strong> pour la recherche MM-RAG + l'analyse stylistique de Pixtral
               <img
-                src="/langsmith-styleanalyzer.png"
+                src="/static/langsmith.png"
                 alt="LangSmith"
                 className="w-full h-auto rounded mt-3 border border-gray-100 rounded-sm"
               />
