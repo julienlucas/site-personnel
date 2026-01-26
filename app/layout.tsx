@@ -23,7 +23,7 @@ const gabarito = Gabarito({
 
 export const metadata: Metadata = {
   title: "Julien Lucas",
-  description: "AI Engineer et développeur senior et créateur de contenu",
+  description: "AI Applied Engineer, développeur senior et créateur de contenu IA",
 };
 
 export default function RootLayout({

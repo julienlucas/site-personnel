@@ -79,7 +79,7 @@ export default function MmRag() {
             </li>
             <li>
               <strong>
-                📊 <span>Latence correct d'environ 10-15 secondes</span>.</strong> pour la recherche MM-RAG + l'analyse stylistique de Pixtral
+                📊 <span>Latence correct d'environ 10-15 secondes</span>.</strong> Pour la recherche MM-RAG + l'analyse stylistique de Pixtral
               <img
                 src="/static/langsmith.png"
                 alt="LangSmith"

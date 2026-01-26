@@ -5,7 +5,10 @@ export default function Certifications() {
   return (
     <Card className="relative px-8 border-none pb-8">
       <CardHeader>
-        <CardTitle variant="h3-card" className="text-center max-w-[460px] mx-auto -mb-3">
+        <CardTitle
+          variant="h3-card"
+          className="text-center max-w-[460px] mx-auto -mb-3"
+        >
           Certifié IA Agentique, RAG et Deeplearning PyTorch
         </CardTitle>
       </CardHeader>
@@ -17,7 +20,12 @@ export default function Certifications() {
             rel="noopener noreferrer"
             className="hover:opacity-80"
           >
-            <Image src="/ibm.svg" alt="Deeplearning" fill className="h-4" />
+            <Image
+              src="/ibm.svg"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
+              fill
+              className="h-4"
+            />
           </a>
         </div>
         <div className="relative flex items-center justify-center max-[120px] h-7 w-full overflow-hidden">
@@ -29,7 +37,7 @@ export default function Certifications() {
           >
             <Image
               src="/deeplearning.png"
-              alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
               fill
               className="object-cover"
             />

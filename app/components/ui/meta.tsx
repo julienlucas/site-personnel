@@ -33,7 +33,7 @@ export default function Meta() {
       />
       <meta
         name="keywords"
-        content="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+        content="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
       />
       <meta name="author" content="Julien Lucas" />
       <link rel="manifest" href="manifest.json" />
@@ -46,11 +46,11 @@ export default function Meta() {
       <meta property="og:url" content="https://julienlucas.com/" />
       <meta
         property="og:title"
-        content="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+        content="Julien Lucas | AI Applied Engineer, Développeur senior et créateur de contenu"
       />
       <meta
         name="description"
-        content="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+        content="Développeur de solutions IA, Agents, LLM et RAG pour les entreprises"
       />
       <meta property="og:image" content="/og-image.jpg" />
 
@@ -59,11 +59,11 @@ export default function Meta() {
       <meta name="twitter:creator" content="@julienlucasjl" />
       <meta
         name="twitter:title"
-        content="Julien Lucas | AI Engineer, Développeur senior, créateur de contenu"
+        content="Julien Lucas | AI Applied Engineer, Développeur senior et créateur de contenu"
       />
       <meta
         name="twitter:description"
-        content="Développeur front-end React et Node freelance créateur de solutions saas pour startups / Formateur devs / Créateur de contenu"
+        content="Développeur de solutions IA, Agents, LLM et RAG pour les entreprises"
       />
       <meta name="twitter:image" content="/og-image.jpg" />
       <script type="application/ld+json">
@@ -72,7 +72,7 @@ export default function Meta() {
           "@context": "http://schema.org",
           "@type": "WebPage",
           "url": "https://julienlucas.com/",
-          "name": "Julien Lucas | AI Engineer, Développeur senior, créateur de contenu"
+          "name": "Julien Lucas | AI Applied Engineer, Développeur senior et créateur de contenu"
         }
         `}
       </script>

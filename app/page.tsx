@@ -43,14 +43,18 @@ export default function Home() {
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🧠</div>
-            <CardTitle variant="h3-b" className="pt-1">Apprentissage profond</CardTitle>
+            <CardTitle variant="h3-b" className="pt-1">
+              Apprentissage profond
+            </CardTitle>
             <CardDescription>
               Création et finetuning de modèles en NLP et Computer Vision.
             </CardDescription>
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">⚙️</div>
-            <CardTitle variant="h3-b" className="pt-1">Développement "classique"</CardTitle>
+            <CardTitle variant="h3-b" className="pt-1">
+              Développement "classique"
+            </CardTitle>
             <CardDescription>
               Architecture logicielle et développement de solutions.
             </CardDescription>
@@ -67,52 +71,68 @@ export default function Home() {
             <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
               <img
                 src="/docchat.jpg"
-                alt="Agentic RAG"
+                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                 className="w-full h-full object-cover rounded-lg"
               />
               <CardTitle variant="h3-b" className="text-center px-6 pt-4">
-                RAG multi-agentique à forte pertinence et sans halucinations pour docs techniques
+                RAG multi-agentique à forte pertinence et sans halucinations
+                pour docs techniques
               </CardTitle>
-              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+              <Button variant="default" size="sm" className="mx-auto">
+                Voir le projet
+              </Button>
             </Card>
           </Link>
           <Link href="/use-cases/mm-rag" className="block">
             <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
               <img
                 src="/styleanalyer.jpg"
-                alt="MM-RAG Fashion"
+                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                 className="w-full h-full object-cover rounded-lg"
               />
               <CardTitle variant="h3-b" className="text-center px-6 pt-4">
-                Recommandation de vêtements et analyse stylistique avec RAG multimodal
+                Recommandation de vêtements et analyse stylistique avec RAG
+                multimodal
               </CardTitle>
-              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+              <Button variant="default" size="sm" className="mx-auto">
+                Voir le projet
+              </Button>
             </Card>
           </Link>
           <Link href="/use-cases/pneumodiag" className="block">
             <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
               <img
                 src="/pneumodiag.jpg"
-                alt="PneumoDiag"
+                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3-b" className="text-center px-6 pt-4 max-w-lg mx-auto">
+              <CardTitle
+                variant="h3-b"
+                className="text-center px-6 pt-4 max-w-lg mx-auto"
+              >
                 Diagnostiquer les pneumonies et leur degrés de viralité
               </CardTitle>
-              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+              <Button variant="default" size="sm" className="mx-auto">
+                Voir le projet
+              </Button>
             </Card>
           </Link>
           <Link href="/use-cases/fakefinder" className="block">
             <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
               <img
                 src="/fakefinder.jpg"
-                alt="FakeFinder"
+                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                 className="w-full h-full object-cover rounded-lg"
               />
-              <CardTitle variant="h3-b" className="text-center px-6 pt-4 max-w-md mx-auto">
+              <CardTitle
+                variant="h3-b"
+                className="text-center px-6 pt-4 max-w-md mx-auto"
+              >
                 Détection de fakes Nano Banana Pro et de modèles de diffusion
               </CardTitle>
-              <Button variant="default" size="sm" className="mx-auto">Voir le projet</Button>
+              <Button variant="default" size="sm" className="mx-auto">
+                Voir le projet
+              </Button>
             </Card>
           </Link>
         </CardContent>
@@ -134,7 +154,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/shootingpro.jpeg"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-cover"
                   />
@@ -156,7 +176,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/smartch.jpeg"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-cover"
                   />
@@ -178,7 +198,7 @@ export default function Home() {
                 <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/corum.svg"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-contain p-0.5"
                   />
@@ -198,7 +218,7 @@ export default function Home() {
                 <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/sewan.png"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-contain p-0.5"
                   />
@@ -219,7 +239,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/reezocar.png"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-cover"
                   />
@@ -239,7 +259,7 @@ export default function Home() {
                 <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
                   <Image
                     src="/iziwork.jpg"
-                    alt="Ingénieur en intelligence artificielle, développeur agents IA, développeur automatisations IA, AI Engineer freelance"
+                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
                     fill
                     className="object-cover"
                   />
