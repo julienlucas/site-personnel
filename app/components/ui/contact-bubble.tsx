@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "./button";
-import { CardTitle } from "./card";
+import { CardTitle, CardDescription } from "./card";
 
 export default function ContactBubble() {
   const [isContactOpen, setIsContactOpen] = useState(true);
@@ -18,7 +18,7 @@ export default function ContactBubble() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       {isContactOpen && (
         <div
-          className="relative w-[260px] cursor-pointer rounded-xl border border-zinc-200 bg-white shadow-lg p-3 text-sm text-zinc-800"
+          className="relative w-[260px] rounded-xl border border-zinc-200 bg-white shadow-lg px-4 py-5 text-sm text-zinc-800"
           onClick={scrollToContact}
           role="button"
           tabIndex={0}
@@ -35,26 +35,26 @@ export default function ContactBubble() {
               event.stopPropagation();
               setIsContactOpen(false);
             }}
-            className="absolute right-2 top-2 text-zinc-500 hover:text-zinc-800"
+            className="absolute right-2 top-2 text-zinc-500 hover:text-zinc-800 cursor-pointer"
             aria-label="Fermer"
           >
             ✕
           </button>
           <img
-            src="/julienlucas.jpg"
+            src="/julienlucas-b.jpeg"
             alt="Contact"
-            className="w-8 h-8 rounded-full"
+            className="w-8 h-8 rounded-full grayscale"
           />
-          <CardTitle className="text-lg font-bold text-black leading-6 -mt-2 -mb-0">
-            Call projet IA
+          <CardTitle className="text-lg font-bold text-black leading-6 -mt-2 mb-1 max-w-[230px] w-full">
+            Call discussion validité de votre projet IA
           </CardTitle>
-          <p className="text-sm leading-5">
-            20 minutes pour valider votre projet d'automatisation ou
-            d'application. N'hésitez pas à me contacter.
-          </p>
+          <div className="text-[16px] leading-5">
+            20 minutes pour voir la faisabilité de votre projet IA. N'hésitez
+            pas à me contacter.
+          </div>
           <Button
             size="sm"
-            className="mt-3 w-full"
+            className="mt-3"
             onClick={(event) => {
               event.stopPropagation();
               scrollToContact();

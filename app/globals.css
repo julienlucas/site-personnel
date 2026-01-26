@@ -54,14 +54,10 @@ html {
   @apply transition-all duration-100 ease-in-out;
 }
 
-button {
-  cursor: pointer;
-}
-
 p,
 ul li,
 ol li {
-  @apply text-zinc-600 text-lg leading-6;
+  @apply text-zinc-600 text-[16px] leading-6;
 }
 
 li span {
@@ -72,9 +68,8 @@ li strong {
   @apply text-black font-bold;
 }
 
-
 #hero h1 {
-  @apply text-3xl font-medium leading-10;
+  @apply font-semibold text-3xl leading-9;
 }
 
 body {

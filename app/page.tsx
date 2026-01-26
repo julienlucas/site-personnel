@@ -28,7 +28,7 @@ export default function Home() {
       <SocialStats />
       <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
         <CardHeader>
-          <CardTitle variant="h3-card">Centres d'Intérêt</CardTitle>
+          <CardTitle variant="h3-card">Spécialisations</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
@@ -37,14 +37,14 @@ export default function Home() {
               Intelligence Artificielle appliquée
             </CardTitle>
             <CardDescription>
-              Développement de modèles, d'agents, et d'automatisations basés sur
-              des modèles IA personnalisés.
+              Développement de modèles, d'agents, de RAG avancés ou
+              d'automatisations avec des modèles fine-tunés.
             </CardDescription>
           </CardHeader>
           <CardHeader className="border border-zinc-200 rounded-lg p-6">
             <div className="text-4xl">🧠</div>
             <CardTitle variant="h3-b" className="pt-1">
-              Apprentissage profond
+              Apprentissage profond en computer vision et NLP
             </CardTitle>
             <CardDescription>
               Création et finetuning de modèles en NLP et Computer Vision.
@@ -64,80 +64,81 @@ export default function Home() {
 
       <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
         <CardHeader>
-          <CardTitle variant="h3-card">Use cases</CardTitle>
+          <CardTitle variant="h3-card">Études de cas</CardTitle>
         </CardHeader>
         <CardContent className="grid md:grid-cols-2 grid-cols-1 gap-4 px-6 pb-6 rounded-lg overflow-hidden">
-          <Link href="/use-cases/agentic-rag" className="block">
-            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
-              <img
-                src="/docchat.jpg"
-                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <CardTitle variant="h3-b" className="text-center px-6 pt-4">
-                RAG multi-agentique à forte pertinence et sans halucinations
-                pour docs techniques
-              </CardTitle>
+          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+            <img
+              src="/docchat.jpg"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
+              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+            />
+            <CardTitle variant="h3-b" className="text-center px-6 pt-4">
+              RAG multi-agentique à forte pertinence et faible taux
+              halucinations
+            </CardTitle>
+            <Link href="/use-cases/agentic-rag" className="block mx-auto">
               <Button variant="default" size="sm" className="mx-auto">
                 Voir le projet
               </Button>
-            </Card>
-          </Link>
-          <Link href="/use-cases/mm-rag" className="block">
-            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
-              <img
-                src="/styleanalyer.jpg"
-                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <CardTitle variant="h3-b" className="text-center px-6 pt-4">
-                Recommandation de vêtements et analyse stylistique avec RAG
-                multimodal
-              </CardTitle>
+            </Link>
+          </Card>
+          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+            <img
+              src="/styleanalyer.jpg"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
+              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+            />
+            <CardTitle
+              variant="h3-b"
+              className="text-center px-6 pt-4 max-w-md mx-auto"
+            >
+              MM-RAG recommandation de tenues par similarité à image uploadée
+            </CardTitle>
+            <Link href="/use-cases/mm-rag" className="block mx-auto">
               <Button variant="default" size="sm" className="mx-auto">
                 Voir le projet
               </Button>
-            </Card>
-          </Link>
-          <Link href="/use-cases/pneumodiag" className="block">
-            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
-              <img
-                src="/pneumodiag.jpg"
-                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <CardTitle
-                variant="h3-b"
-                className="text-center px-6 pt-4 max-w-lg mx-auto"
-              >
-                Diagnostiquer les pneumonies et leur degrés de viralité
-              </CardTitle>
+            </Link>
+          </Card>
+          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+            <img
+              src="/pneumodiag.jpg"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
+              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+            />
+            <CardTitle
+              variant="h3-b"
+              className="text-center px-6 pt-4 max-w-sm mx-auto"
+            >
+              Diagnostiquer les pneumonies et leur degrés de viralité
+            </CardTitle>
+            <Link href="/use-cases/pneumodiag" className="block mx-auto">
               <Button variant="default" size="sm" className="mx-auto">
                 Voir le projet
               </Button>
-            </Card>
-          </Link>
-          <Link href="/use-cases/fakefinder" className="block">
-            <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-4">
-              <img
-                src="/fakefinder.jpg"
-                alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                className="w-full h-full object-cover rounded-lg"
-              />
-              <CardTitle
-                variant="h3-b"
-                className="text-center px-6 pt-4 max-w-md mx-auto"
-              >
-                Détection de fakes Nano Banana Pro et de modèles de diffusion
-              </CardTitle>
+            </Link>
+          </Card>
+          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+            <img
+              src="/fakefinder.jpg"
+              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
+              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+            />
+            <CardTitle
+              variant="h3-b"
+              className="text-center px-6 pt-4 max-w-md mx-auto"
+            >
+              Détecter les images fakes IA
+            </CardTitle>
+            <Link href="/use-cases/fakefinder" className="block mx-auto">
               <Button variant="default" size="sm" className="mx-auto">
                 Voir le projet
               </Button>
-            </Card>
-          </Link>
+            </Link>
+          </Card>
         </CardContent>
       </Card>
-
       <Card
         id="a-propos"
         className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0"
@@ -163,7 +164,7 @@ export default function Home() {
                   <div className="text-sm text-zinc-500 italic">
                     Sept 2025 - Aujourd'hui
                   </div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Shootingpro.co - Fondateur / AI Engineer
                   </div>
                   <p>
@@ -185,7 +186,7 @@ export default function Home() {
                   <div className="text-sm text-zinc-500 italic">
                     2022 - 2023
                   </div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Lead développeur front-end chez Smartch
                   </div>
                   <p>
@@ -205,7 +206,7 @@ export default function Home() {
                 </Card>
                 <div className="flex-1 pt-0.5">
                   <div className="text-sm text-zinc-500 italic">2022</div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Développeur front-end chez Corum l'Épargne
                   </div>
                   <p>
@@ -225,7 +226,7 @@ export default function Home() {
                 </Card>
                 <div className="flex-1 pt-0.5">
                   <div className="text-sm text-zinc-500 italic">2021</div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Software engineer front-end chez Sewan
                   </div>
                   <p>
@@ -246,7 +247,7 @@ export default function Home() {
                 </Card>
                 <div className="flex-1 pt-0.5">
                   <div className="text-sm text-zinc-500 italic">2021</div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Développeur front-end chez Reezocar
                   </div>
                   <p>
@@ -268,7 +269,7 @@ export default function Home() {
                   <div className="text-sm text-zinc-500 italic">
                     2020 - 2021
                   </div>
-                  <div className="font-semibold text-lg">
+                  <div className="font-bold text-lg">
                     Développeur full-stack chez iziwork
                   </div>
                   <p>Multiples missions pour la refonte du site vitrine.</p>
@@ -290,7 +291,7 @@ export default function Home() {
         <Accordion
           type="multiple"
           defaultValue={["item-1", "item-2", "item-3", "item-4", "item-5"]}
-          className="w-full px-6 -mt-6"
+          className="w-full px-6"
         >
           <AccordionItem value="item-1">
             <AccordionTrigger>
@@ -306,8 +307,8 @@ export default function Home() {
                 <br /> Ceci avec la panoplies des techniques de finetuning de
                 modèles.
                 <br />
-                Et l'optimisation réelle des coûts, la latence des modèles et de
-                la rapidité des apprentisages (grâce aux outils prévus pour).
+                Et l'optimisation des coûts et de la latence des modèles, et
+                les entraînements de modèles.
               </p>
             </AccordionContent>
           </AccordionItem>

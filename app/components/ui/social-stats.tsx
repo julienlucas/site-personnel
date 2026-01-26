@@ -39,11 +39,9 @@ export default function SocialStats() {
   };
 
   return (
-    <section className="relative py-6 pb-12 w-full border border-zinc-200 border-l-0 border-r-0 border-b-0">
+    <section className="relative py-4 pb-12 w-full border border-zinc-200 border-l-0 border-r-0 border-b-0">
       <div className="max-w-[1100px] mx-auto">
-        <CardTitle variant="h2" className="text-center">
-          Mes réseaux sociaux
-        </CardTitle>
+        <CardTitle variant="h3-card" className="mx-auto mb-6">Mes réseaux sociaux</CardTitle>
         <div className="flex flex-wrap justify-center gap-8">
           <div className="flex flex-col items-center gap-2">
             <a

@@ -26,17 +26,21 @@ export default function ContactForm() {
 
   return (
     <>
+      <CardTitle variant="h3-card" className="mx-auto -mb-5">Prendre contact</CardTitle>
       <CardTitle
         variant="h3"
-        className="md:text-[44px] text-3xl font-bold mt-12 max-w-3xl mx-auto text-center"
+        className="md:text-[44px] text-3xl font-bold mt-6 max-w-3xl mx-auto text-center"
       >
-        On discute de votre projet d'automatisation ou d'application?
+        On discute ?
       </CardTitle>
       <CardDescription className="text-center mb-4">
-        Remplissez le formulaire ci-dessous et je vous recontacte dans les
-        24-48 heures.
+        Remplissez le formulaire ci-dessous et je vous recontacte dans les 24-48
+        heures.
       </CardDescription>
-      <form onSubmit={handleSubmit} className="space-y-4 py-14 max-w-2xl mx-auto">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-4 py-14 max-w-2xl mx-auto"
+      >
         <div className="space-y-1">
           <label className="text-sm font-medium">Votre adresse email</label>
           <input
@@ -88,7 +92,12 @@ export default function ContactForm() {
           />
         </div>
 
-        <Button variant="default" size="xl" className="w-full" disabled={isSubmitting}>
+        <Button
+          variant="default"
+          size="xl"
+          className="w-full"
+          disabled={isSubmitting}
+        >
           {isSubmitting ? "Envoi en cours..." : "Envoyer maintenant"}
         </Button>
         {submitStatus === "success" && (

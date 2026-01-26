@@ -6,16 +6,18 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="max-w-[1100px] pt-10 pb-10 px-4 md:px-8 mx-auto"
+      className="max-w-[1100px] w-fit pt-10 pb-10 px-4 md:px-12 mx-auto"
     >
-      <Card className="border-none shadow-none grid md:grid-cols-2 grid-cols-1 gap-5">
-        <CardHeader className="p-1 px-2">
+      <Card className="border-none shadow-none grid md:grid-cols-2 grid-cols-1 gap-2">
+        <CardHeader className="p-1">
           <div className="flex flex-col justify-center h-full">
-            <CardTitle variant="h1">Bonjour, je suis Julien Lucas</CardTitle>
+            <CardTitle variant="h1" className="mt-0 pt-0">
+              Bonjour je suis Julien Lucas, Applied AI Engineer et développeur senior
+            </CardTitle>
             <CardDescription className="mb-4">
-              Passionné d'IA appliquée, d'apprentissage profond et développeur
-              senior 5 ans d'expériences et aussi créateur de contenus où je
-              vulgarise l'Intelligence Artificielle.
+              Passionné d'IA appliquée, d'apprentissage profond, développeur
+              senior 5 ans d'expériences en startups et scaleups, et aussi
+              créateur de contenus où je vulgarise l'Intelligence Artificielle.
             </CardDescription>
             <Button
               onClick={() => {
@@ -25,29 +27,33 @@ export default function Hero() {
                 }
               }}
               variant="default"
-              size="xl"
+              size="lg"
             >
-              Besoin de réaliser un projet? Contactez-moi
+              Besoin d'étudier votre projet IA? Contactez-moi
             </Button>
           </div>
         </CardHeader>
-        <CardHeader className="p-1 px-2 mt-8 md:mt-0 border-none shadow-none">
-          <Card className="border-none shadow-none relative h-64 md:h-80 overflow-hidden flex justify-center align-center">
+        <CardHeader className="border-none shadow-none">
+          <Card className="border-none mx-auto shadow-none relative w-64 md:w-80 h-64 md:h-80 overflow-hidden flex justify-center align-center">
             <Image
-              src="/julienlucas.webp"
+              src="/julienlucas-b.jpeg"
               alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
               fill
-              className="object-cover rounded-lg object-top"
+              className="grayscale object-cover rounded-full object-center"
             />
           </Card>
         </CardHeader>
       </Card>
       <CardTitle
         variant="h2"
-        className="md:text-[44px] text-3xl leading-[1.1] text-center py-10 pb-4 w-full mx-auto max-w-3xl"
+        className="md:text-[40px] text-3xl leading-[1.1] text-center w-full mx-auto max-w-3xl"
       >
-        Je vous aide à automatiser votre entreprise
+        Embauchez-moi pour développer votre solution IA générative et
+        automatisation pour votre entreprise
       </CardTitle>
+      <CardDescription className="text-center w-full mx-auto max-w-3xl italic">
+        TJM 550€ / jour ou forfait tout compris possibles
+      </CardDescription>
     </section>
   );
 }

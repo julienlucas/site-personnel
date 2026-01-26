@@ -40,7 +40,7 @@ const CardTitle = React.forwardRef<
       <h1
         ref={ref}
         className={cn(
-          "text-5xl font-bold tracking-tight text-black pt-8 mb-[0rem] leading-14",
+          "text-5xl font-bold tracking-tight text-black pt-8 mb-[1rem] leading-14",
           className
         )}
         {...props}
@@ -79,7 +79,7 @@ const CardTitle = React.forwardRef<
       <h3
         ref={ref}
         className={cn(
-          "text-sm uppercase font-semibold tracking-tight bg-black text-white w-fit px-4 py-[.02rem] mt-10 mb-[1rem] leading-8",
+          "text-sm uppercase font-semibold rounded-xs bg-black text-white w-fit px-4 py-[.02rem] mt-10 mb-[0rem] leading-8",
           className
         )}
         style={{ fontFamily: "'IBM Plex Mono', monospace" }}
@@ -93,7 +93,7 @@ const CardTitle = React.forwardRef<
     <h3
         ref={ref}
         className={cn(
-          "text-2xl font-semibold tracking-tight text-black pt-4 mb-[1rem] leading-7",
+          "text-2xl font-bold tracking-tight text-black pt-4 mb-[1rem] leading-7",
           className
         )}
         {...props}
@@ -118,7 +118,7 @@ const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
-  <p ref={ref} className={cn("text-lg text-zinc-600", className)} {...props} />
+  <p ref={ref} className={cn("text-md text-zinc-600", className)} {...props} />
 ));
 CardDescription.displayName = "CardDescription";
 
