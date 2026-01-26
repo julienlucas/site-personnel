@@ -26,9 +26,10 @@ export default function Home() {
     <main className="max-w-[1100px] min-h-screen mt-3 mb-16 mx-auto pb-0 mx-auto border border-zinc-200 rounded-lg">
       <Hero />
       <SocialStats />
+      <Certifications />
       <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
         <CardHeader>
-          <CardTitle variant="h3-card">Spécialisations</CardTitle>
+          <CardTitle variant="h3-card">Centres d'intérêt</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
           <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
@@ -307,8 +308,8 @@ export default function Home() {
                 <br /> Ceci avec la panoplies des techniques de finetuning de
                 modèles.
                 <br />
-                Et l'optimisation des coûts et de la latence des modèles, et
-                les entraînements de modèles.
+                Et l'optimisation des coûts et de la latence des modèles, et les
+                entraînements de modèles.
               </p>
             </AccordionContent>
           </AccordionItem>
@@ -335,8 +336,6 @@ export default function Home() {
           </AccordionItem>
         </Accordion>
       </Card>
-
-      <Certifications />
 
       {/* Contact Form */}
       <Card

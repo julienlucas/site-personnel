@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Certifications() {
   return (
-    <Card className="relative px-8 border-none pb-8">
+    <Card className="relative px-8 border border-b-0 border-l-0 border-r-0 border-zinc-200 pb-8">
       <CardHeader>
         <CardTitle
           variant="h3-card"
