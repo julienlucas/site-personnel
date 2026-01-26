@@ -31,17 +31,17 @@ export default function Home() {
           <CardTitle variant="h3-card">Spécialisations</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
-          <CardHeader className="border border-zinc-200 rounded-lg p-6">
+          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
             <div className="text-4xl">🤖</div>
             <CardTitle variant="h3-b" className="pt-1">
               Intelligence Artificielle appliquée
             </CardTitle>
             <CardDescription>
-              Développement de modèles, d'agents, de RAG avancés ou
-              d'automatisations avec des modèles fine-tunés.
+              Développement de modèles, d'agents, de RAG avancés,
+              d'automatisations, et solutions IA.
             </CardDescription>
           </CardHeader>
-          <CardHeader className="border border-zinc-200 rounded-lg p-6">
+          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
             <div className="text-4xl">🧠</div>
             <CardTitle variant="h3-b" className="pt-1">
               Apprentissage profond en computer vision et NLP
@@ -50,13 +50,13 @@ export default function Home() {
               Création et finetuning de modèles en NLP et Computer Vision.
             </CardDescription>
           </CardHeader>
-          <CardHeader className="border border-zinc-200 rounded-lg p-6">
+          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
             <div className="text-4xl">⚙️</div>
             <CardTitle variant="h3-b" className="pt-1">
               Développement "classique"
             </CardTitle>
             <CardDescription>
-              Architecture logicielle et développement de solutions.
+              Architecture logicielle, développement fullstack.
             </CardDescription>
           </CardHeader>
         </CardContent>
