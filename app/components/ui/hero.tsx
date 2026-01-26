@@ -48,8 +48,8 @@ export default function Hero() {
         variant="h2"
         className="md:text-[40px] text-3xl leading-[1.1] text-center w-full mx-auto max-w-4xl"
       >
-        Embauchez-moi pour créer votre solution IA générative,
-        automatiser votre entreprise et donc économiser temps et argent
+        Embauchez-moi pour créer votre solution IA générative et
+        automatiser votre entreprise
       </CardTitle>
       <CardDescription className="text-center w-full mx-auto max-w-3xl italic">
         TJM 550€ / jour ou forfait tout compris possibles
