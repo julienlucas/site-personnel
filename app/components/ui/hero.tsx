@@ -6,13 +6,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="max-w-[1100px] w-fit pt-10 pb-10 px-4 md:px-12 mx-auto"
+      className="w-fit pt-10 pb-10 px-4 md:px-12 mx-auto"
     >
-      <Card className="border-none shadow-none grid md:grid-cols-2 grid-cols-1 gap-2">
+      <Card className="w-full border-none shadow-none grid md:grid-cols-2 grid-cols-1 gap-2">
         <CardHeader className="p-1">
           <div className="flex flex-col justify-center h-full">
             <CardTitle variant="h1" className="mt-0 pt-0">
-              Bonjour je suis Julien Lucas, Applied AI Engineer et développeur senior
+              Bonjour je suis Julien Lucas, AI Applied Engineer et développeur senior
             </CardTitle>
             <CardDescription className="mb-4">
               Passionné d'IA appliquée, d'apprentissage profond, développeur
@@ -48,8 +48,8 @@ export default function Hero() {
         variant="h2"
         className="md:text-[40px] text-3xl leading-[1.1] text-center w-full mx-auto max-w-4xl"
       >
-        Embauchez-moi pour créer votre solution IA générative et
-        automatiser votre entreprise
+        Embauchez-moi pour créer votre solution IA générative et automatiser
+        votre entreprise
       </CardTitle>
       <CardDescription className="text-center w-full mx-auto max-w-3xl italic">
         TJM 550€ / jour ou forfait tout compris possibles

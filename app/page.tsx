@@ -142,7 +142,7 @@ export default function Home() {
       </Card>
       <Card
         id="a-propos"
-        className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0"
+        className="relative max-w-2xl w-full mx-auto md:px-8 px-2 shadow-none border-none rounded-none pb-8 border-zinc-200 border-l-0 border-r-0 border-b-0"
       >
         <CardHeader>
           <CardTitle variant="h3-card">Expériences professionnelles</CardTitle>
