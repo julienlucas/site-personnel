@@ -1,6 +1,5 @@
+"use client";
 import { useState } from "react";
-import { Button } from "./button";
-import { CardTitle, CardDescription } from "./card";
 
 type SubmitStatus = "success" | "error" | null;
 
@@ -10,9 +9,7 @@ export default function ContactForm() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (isSubmitting) {
-      return;
-    }
+    if (isSubmitting) return;
     setIsSubmitting(true);
     setSubmitStatus(null);
     const form = event.currentTarget;
@@ -24,91 +21,67 @@ export default function ContactForm() {
     }, 600);
   };
 
+  const inputClass =
+    "w-full bg-paper border border-rule px-3 py-2.5 text-[15px] text-ink placeholder:text-ink-muted focus:outline-none focus:border-ink";
+  const labelClass = "font-mono-label text-ink-soft block mb-1.5";
+
   return (
-    <>
-      <CardTitle variant="h3-card" className="mx-auto -mb-5">Prendre contact</CardTitle>
-      <CardTitle
-        variant="h3"
-        className="md:text-[44px] text-3xl font-bold mt-6 max-w-3xl mx-auto text-center"
+    <form
+      onSubmit={handleSubmit}
+      className="border border-rule bg-paper-soft/30 p-6 md:p-7 space-y-4"
+    >
+      <div>
+        <label className={labelClass}>Email</label>
+        <input
+          type="email"
+          name="from_email"
+          required
+          placeholder="vous@exemple.com"
+          className={inputClass}
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className={labelClass}>Nom</label>
+          <input type="text" name="name" required className={inputClass} />
+        </div>
+        <div>
+          <label className={labelClass}>Entreprise</label>
+          <input type="text" name="company" className={inputClass} />
+        </div>
+      </div>
+
+      <div>
+        <label className={labelClass}>Sujet</label>
+        <input type="text" name="subject" required className={inputClass} />
+      </div>
+
+      <div>
+        <label className={labelClass}>Message</label>
+        <textarea
+          name="message"
+          required
+          rows={5}
+          className={inputClass}
+          placeholder="Décrivez votre projet en quelques lignes…"
+        />
+      </div>
+
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="font-mono-label bg-ink text-paper px-5 py-3 hover:bg-forest disabled:opacity-50 w-full md:w-auto"
       >
-        On discute ?
-      </CardTitle>
-      <CardDescription className="text-center mb-4">
-        Remplissez le formulaire ci-dessous et je vous recontacte dans les 24-48
-        heures.
-      </CardDescription>
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 py-14 max-w-2xl mx-auto"
-      >
-        <div className="space-y-1">
-          <label className="text-sm font-medium">Votre adresse email</label>
-          <input
-            type="email"
-            name="from_email"
-            required
-            className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          />
-        </div>
+        {isSubmitting ? "Envoi…" : "Envoyer"}
+      </button>
 
-        <div className="space-y-1">
-          <label className="text-sm font-medium">Votre nom et prénom</label>
-          <input
-            type="text"
-            name="name"
-            required
-            className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-sm font-medium">
-            Le nom de votre entreprise
-          </label>
-          <input
-            type="text"
-            name="company"
-            className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-sm font-medium">Sujet</label>
-          <input
-            type="text"
-            name="subject"
-            required
-            className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-sm font-medium">Votre message</label>
-          <textarea
-            name="message"
-            required
-            rows={5}
-            className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          />
-        </div>
-
-        <Button
-          variant="default"
-          size="xl"
-          className="w-full"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Envoi en cours..." : "Envoyer maintenant"}
-        </Button>
-        {submitStatus === "success" && (
-          <p className="text-green-600 text-sm">Message envoyé avec succès !</p>
-        )}
-        {submitStatus === "error" && (
-          <p className="text-red-600 text-sm">
-            Erreur lors de l'envoi. Veuillez réessayer.
-          </p>
-        )}
-      </form>
-    </>
+      {submitStatus === "success" && (
+        <p className="font-mono-label text-forest">✓ Message envoyé.</p>
+      )}
+      {submitStatus === "error" && (
+        <p className="font-mono-label text-rose">✕ Erreur. Réessayez.</p>
+      )}
+    </form>
   );
 }

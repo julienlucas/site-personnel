@@ -1,29 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Gabarito } from "next/font/google";
+import { Sora, Space_Mono } from "next/font/google";
 import Navigation from "./components/ui/navigation";
-import ContactBubble from "./components/ui/contact-bubble";
+import SideNav from "./components/ui/side-nav";
+import SiteFooter from "./components/ui/site-footer";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
-});
-
-const gabarito = Gabarito({
-  variable: "--font-gabarito",
-  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Julien Lucas",
-  description: "AI Applied Engineer, développeur senior et créateur de contenu IA",
+  title: "Julien Lucas — A profile in seven parts",
+  description:
+    "Julien Lucas. Cinq ans à coder pour des scale-ups. Une bascule fin 2024 vers l'IA. Aujourd'hui AI Engineer freelance à Avignon.",
 };
 
 export default function RootLayout({
@@ -33,9 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${gabarito.variable} font-sans antialiased`}
-      >
+      <body className={`${sora.variable} ${spaceMono.variable}`}>
         <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-LZL71FQRRE`}
@@ -55,17 +53,9 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Navigation />
-        <ContactBubble />
-        <div className="max-w-[1200px] -mb-13 mx-auto border-t-0 border-b-0 px-4">
-          {children}
-        </div>
-        <footer className="mx-auto border-t border-zinc-200 mt-auto">
-          <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="text-sm flex justify-center">
-              © {new Date().getFullYear()} Julien Lucas. Tous droits réservés.
-            </div>
-          </div>
-        </footer>
+        <SideNav />
+        <main>{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );

@@ -1,138 +1,129 @@
-"use client";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../../components/ui/card";
-import ContactForm from "../../components/ui/contact-form";
-import { Button } from "../../components/ui/button";
-import ScrollTopOnMount from "../../components/ui/scroll-top";
+import Link from "next/link";
+import LinkedinOutro from "../../components/ui/linkedin-outro";
 
-export default function AgenticRag() {
+export const metadata = {
+  title: "RAG multi-agentique pour docs techniques — Julien Lucas",
+  description:
+    "Étude de cas : RAG hybride BM25 + vectoriel avec deux agents (FactChecker + PertinenceChecker). Recall@10 passe de 37,5 % à 62,5 %.",
+};
+
+export default function AgenticRagPage() {
   return (
-    <main className="max-w-[1100px] min-h-screen mx-auto py-3 pb-17">
-      <ScrollTopOnMount />
-      <Card className="border">
-        <CardHeader>
-          <CardTitle variant="h1" className="text-center w-full max-w-3xl mx-auto mt-8">RAG agentique à forte pertinence pour docs techniques</CardTitle>
-          <img
-            src="/docchat.jpg"
-            alt="Agentic RAG"
-            className="w-full h-full object-cover rounded-lg mt-10"
-          />
-          <a href="https://docchat-agentic-rag.up.railway.app" target="_blank" className="mt-2 mx-auto">
-            <Button variant="default" size="xl">
-              Voir démo du projet
-            </Button>
-          </a>
-        </CardHeader>
-        <CardContent className="p-0 mt-6 border-none max-w-2xl mx-auto">
-          <CardTitle
-            variant="h2"
-            className="bg-gradient-to-br from-black via-black to-black bg-clip-text text-transparent"
-          >
-            Étude de cas
-          </CardTitle>
-          <CardTitle variant="h3-card" className="mb-0 mt-4">
-            Le challenge
-          </CardTitle>
-          <CardTitle variant="h3" className="font-medium">
-            Créer un système RAG récupérant de l'info factcheckée et pertinente dans le cas de docs techniques.
-          </CardTitle>
-          <ul className="list-disc list-inside mb-4 space-y-4">
+    <>
+      <header className="uc-hero">
+        <div className="uc-hero-inner">
+          <Link href="/#pocs" className="uc-back">
+            ← Retour aux études
+          </Link>
+          <div className="uc-hero-meta">
+            <span>POC No. 01</span>
+            <span>/</span>
+            <span>RAG agentique</span>
+          </div>
+          <h1 className="uc-hero-title">
+            RAG agentique à forte pertinence pour docs techniques.
+          </h1>
+          <div className="uc-hero-cta">
+            <a
+              href="https://docchat-agentic-rag.up.railway.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Voir la démo →
+            </a>
+          </div>
+          <figure className="uc-hero-img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/docchat.jpg" alt="DocChat agentic RAG" />
+          </figure>
+        </div>
+      </header>
+
+      <section className="uc-section">
+        <div className="uc-inner">
+          <h2 className="uc-h2">Le challenge</h2>
+          <p className="uc-h3">
+            Créer un système RAG qui récupère de l'information factcheckée et
+            pertinente sur des documentations techniques.
+          </p>
+          <ul className="uc-list">
             <li>
-              <strong>Pertinence de la récupération</strong> : Remonter les
+              <strong>Pertinence de la récupération.</strong> Remonter les
               passages exacts malgré le bruit, le vocabulaire technique et les
               tableaux.
             </li>
             <li>
-              <strong>Avoir aussi un factcheck des réponses</strong> : Éviter les
-              hallucinations et ne répondre qu'avec des preuves dans le
-              contexte.
+              <strong>Factcheck des réponses.</strong> Éviter les hallucinations
+              et ne répondre qu'avec des preuves dans le contexte.
             </li>
             <li>
-              <strong>
-                Pouvoir couvrir de multiples documents et pages
-              </strong>{" "}
-              : Croiser plusieurs sources sans perdre l'information clé.
+              <strong>Couvrir de multiples documents et pages.</strong> Croiser
+              plusieurs sources sans perdre l'information clé.
             </li>
             <li>
-              <strong>Vérifier la qualité OCR avec la solution Mistral OCR</strong> :
+              <strong>Vérifier la qualité OCR avec Mistral OCR.</strong>{" "}
               Extraire du texte propre depuis des PDF longs et hétérogènes.
             </li>
             <li>
-              <strong>Évaluer la pertinence</strong> : Prouver la
-              pertinence avec des métriques et des comparaisons avant/après.
+              <strong>Évaluer la pertinence.</strong> Prouver la pertinence
+              avec des métriques et des comparaisons avant/après.
             </li>
           </ul>
-          <CardTitle variant="h3-card">Résultats et évaluation</CardTitle>
-          <ul className="list-inside mb-4 space-y-4">
-            <ul className="list-inside mb-4 space-y-4">
-              <li>
-                <strong>
-                  Récupération hybride + ajout de 2 agents spécialisés
-                  (FactChecker et PertinenceChecker)
-                </strong>{" "}
-                : La combinaison BM25 + recherche vectorielle permettant{" "}
-                <span>
-                  la bonne couverture et pertinence des réponses sur des
-                  documentations techniques.
-                </span>
-              </li>
-              <li>
-                <strong>🎯 Recall@10 (top 10 résultats) : 37.5% → 62.5%</strong>{" "}
-                —{" "}
-                <span>
-                  donc 5 questions sur 8 ont au moins un passage pertinent dans
-                  le top 10.
-                </span>
-              </li>
-              <li>
-                <strong>🎯 MRR@10 (top 10 résultats) : 27.6% → 47.92%</strong> —{" "}
-                <span>
-                  donc en moyenne le 1er bon passage arrive vers la 2ᵉ place.
-                </span>
-              </li>
-              <li>
-                <strong>🎯 nDCG@10 (top 10 résultats) : 35.96% → 51.64%</strong>{" "}
-                —{" "}
-                <span>
-                  donc classement global de pertience correct, mais pas encore
-                  excellent.
-                </span>
-              </li>
-              <li>
-                <strong>
-                  <span>
-                    🌀 Un 0% d'hallucination grâce au reranker développé
-                  </span>
-                </strong>{" "}
-                mais peu fiable, il faudrait des tests sur une plus vaste
-                quantité de données.
-              </li>
-              <li>
-                <strong>
-                  💡 Au final{" "}
-                  <span>
-                    81% des résponses jugées pertinentes d'après RAGAS,
-                  </span>
-                </strong>{" "}
-                mais testé sur seulement 2 documents.
-              </li>
-            </ul>
+        </div>
+      </section>
+
+      <section className="uc-section" style={{ background: "var(--p-paper-2)" }}>
+        <div className="uc-inner">
+          <h2 className="uc-h2">Résultats &amp; évaluation</h2>
+          <ul className="uc-list">
+            <li>
+              <strong>
+                Récupération hybride + 2 agents spécialisés (FactChecker &amp;
+                PertinenceChecker).
+              </strong>{" "}
+              La combinaison BM25 + recherche vectorielle améliore la
+              couverture et la pertinence sur des docs techniques.
+            </li>
+            <li>
+              <em>Recall@10</em> : <strong>37,5 % → 62,5 %</strong>. 5
+              questions sur 8 ont au moins un passage pertinent dans le top 10.
+            </li>
+            <li>
+              <em>MRR@10</em> : <strong>27,6 % → 47,9 %</strong>. En moyenne le
+              1ᵉʳ bon passage arrive vers la 2ᵉ place.
+            </li>
+            <li>
+              <em>nDCG@10</em> : <strong>35,9 % → 51,6 %</strong>. Classement
+              global de pertinence correct, mais pas encore excellent.
+            </li>
+            <li>
+              <em>0 % d'hallucination</em> grâce au reranker — à valider sur
+              une plus large quantité de données.
+            </li>
+            <li>
+              <strong>81 % des réponses jugées pertinentes par RAGAS</strong>,
+              testé sur 2 documents.
+            </li>
           </ul>
-          <img
-            src="/langsmith-docchat.png"
-            className="w-full h-auto rounded mt-3 border border-gray-100 rounded-sm"
-          />
-          <CardDescription className="italic text-center text-xs">
-            Montoring dans Langsmith
-          </CardDescription>
-          <br />
-          <p>
-            En somme un bon POC.
-            <br />
-            Mais à améliorer pour passage à l'échelle.
+          <figure className="uc-figure">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/langsmith-docchat.png" alt="Monitoring LangSmith" />
+            <figcaption>Monitoring dans LangSmith</figcaption>
+          </figure>
+          <p className="uc-conclusion">
+            Bon POC. À améliorer pour passage à l'échelle.
           </p>
-        </CardContent>
-        <ContactForm />
-      </Card>
-    </main>
+        </div>
+      </section>
+
+      <LinkedinOutro
+        title={
+          <>
+            Tu as un projet RAG ?{" "}
+            <span className="profile-em">On en parle sur LinkedIn.</span>
+          </>
+        }
+      />
+    </>
   );
 }

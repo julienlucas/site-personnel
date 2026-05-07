@@ -1,89 +1,62 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "./button";
-import { CardTitle, CardDescription } from "./card";
+import Image from "next/image";
 
 export default function ContactBubble() {
-  const [isContactOpen, setIsContactOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToContact = () => {
-    const target = document.getElementById("contact");
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    setIsOpen(false);
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-      {isContactOpen && (
-        <div
-          className="relative w-[260px] rounded-xl border border-zinc-200 bg-white shadow-lg px-4 py-5 text-sm text-zinc-800"
-          onClick={scrollToContact}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
-              event.preventDefault();
-              scrollToContact();
-            }
-          }}
-        >
+      {isOpen && (
+        <div className="w-[280px] bg-paper border border-rule shadow-sm p-4">
           <button
             type="button"
-            onClick={(event) => {
-              event.stopPropagation();
-              setIsContactOpen(false);
-            }}
-            className="absolute right-2 top-2 text-zinc-500 hover:text-zinc-800 cursor-pointer"
+            onClick={() => setIsOpen(false)}
+            className="absolute right-3 top-3 text-ink-muted hover:text-ink"
             aria-label="Fermer"
           >
             ✕
           </button>
-          <img
-            src="/julienlucas-b.jpeg"
-            alt="Contact"
-            className="w-8 h-8 rounded-full grayscale"
-          />
-          <CardTitle className="text-lg font-bold text-black leading-6 -mt-2 mb-1 max-w-[230px] w-full">
-            Call discussion validité de votre projet IA
-          </CardTitle>
-          <div className="text-[16px] leading-5">
-            20 minutes pour voir la faisabilité de votre projet IA. N'hésitez
-            pas à me contacter.
+          <div className="flex items-center gap-3">
+            <span className="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-rule flex-shrink-0">
+              <Image
+                src="/julienlucas-b.jpeg"
+                alt="Julien Lucas"
+                fill
+                className="object-cover"
+              />
+            </span>
+            <span className="font-mono-label text-ink-muted">
+              Disponible · Avignon
+            </span>
           </div>
-          <Button
-            size="sm"
-            className="mt-3"
-            onClick={(event) => {
-              event.stopPropagation();
-              scrollToContact();
-            }}
+          <p className="mt-3 text-[14px] leading-snug text-ink">
+            Call de 20 min pour discuter de la faisabilité de votre projet IA.
+          </p>
+          <button
+            type="button"
+            onClick={scrollToContact}
+            className="mt-3 w-full font-mono-label bg-ink text-paper px-4 py-2.5 hover:bg-forest"
           >
             Prendre contact
-          </Button>
+          </button>
         </div>
       )}
       <button
         type="button"
-        onClick={() => setIsContactOpen((current) => !current)}
-        className="relative h-12 w-12 rounded-full bg-black text-white flex items-center justify-center shadow-lg hover:bg-black/80"
+        onClick={() => setIsOpen((c) => !c)}
+        className="h-12 w-12 rounded-full bg-ink text-paper flex items-center justify-center shadow-md hover:bg-forest"
         aria-label="Contacter Julien"
       >
-        <span
-          className="absolute inset-0.5 rounded-full animate-spin"
-          style={{
-            animationDuration: "3s",
-            filter: "blur(7px)",
-            willChange: "transform",
-            background:
-              "conic-gradient(from 0deg, rgba(255,255,255,0) 0deg, rgba(255,255,255,0.2) 120deg, rgba(255,255,255,0.9) 220deg, rgba(255,255,255,0) 360deg)",
-            WebkitMask:
-              "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0)",
-            mask: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0)",
-          }}
-        />
-        ✉️
+        ✉
       </button>
     </div>
   );

@@ -1,351 +1,712 @@
-"use client";
-import Hero from "./components/ui/hero";
-import SocialStats from "./components/ui/social-stats";
-import { Button } from "./components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./components/ui/accordion";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from "./components/ui/card";
-import Certifications from "./components/ui/certifications";
-import ContactForm from "./components/ui/contact-form";
+import YoutubeFeed from "./components/ui/youtube-feed";
 
 export default function Home() {
-
   return (
-    <main className="max-w-[1100px] min-h-screen mt-3 mb-16 mx-auto pb-0 mx-auto border border-zinc-200 rounded-lg">
-      <Hero />
-      <SocialStats />
-      <Certifications />
-      <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
-        <CardHeader>
-          <CardTitle variant="h3-card">Centres d'intérêt</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-2 grid md:grid-cols-3 grid-cols-1 gap-3 w-full">
-          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
-            <div className="text-4xl">🤖</div>
-            <CardTitle variant="h3-b" className="pt-1">
-              Intelligence Artificielle appliquée
-            </CardTitle>
-            <CardDescription>
-              Développement de modèles, d'agents, de RAG avancés,
-              d'automatisations, et solutions IA.
-            </CardDescription>
-          </CardHeader>
-          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
-            <div className="text-4xl">🧠</div>
-            <CardTitle variant="h3-b" className="pt-1">
-              Apprentissage profond en computer vision et NLP
-            </CardTitle>
-            <CardDescription>
-              Création et finetuning de modèles en NLP et Computer Vision.
-            </CardDescription>
-          </CardHeader>
-          <CardHeader className="border border-zinc-200 rounded-lg p-6 h-full flex flex-col">
-            <div className="text-4xl">⚙️</div>
-            <CardTitle variant="h3-b" className="pt-1">
-              Développement "classique"
-            </CardTitle>
-            <CardDescription>
-              Architecture logicielle, développement fullstack.
-            </CardDescription>
-          </CardHeader>
-        </CardContent>
-      </Card>
+    <>
+      {/* ─────────────────────  COVER  ───────────────────── */}
+      <section className="profile-cover" id="cover">
+        <div className="profile-cover-head">
+          <span>Développeur 5 ans d'expérience</span>
+          <span>AI Engineer freelance</span>
+          <span>Avignon, France</span>
+        </div>
 
-      <Card className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0">
-        <CardHeader>
-          <CardTitle variant="h3-card">Études de cas</CardTitle>
-        </CardHeader>
-        <CardContent className="grid md:grid-cols-2 grid-cols-1 gap-4 px-6 pb-6 rounded-lg overflow-hidden">
-          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+        <div className="profile-cover-stage">
+          <div className="profile-cover-title">
+            <div className="profile-eyebrow">Faisons connaissance</div>
+            <h1 className="profile-h1">
+              <span>Julien</span>
+              <span>Lucas.</span>
+            </h1>
+            <p className="profile-tagline">
+              Cinq ans à coder pour des startups, sans école. Fin 2024,
+              ChatGPT-4 a tout fait basculer. Aujourd'hui je construis des{" "}
+              <strong>agents IA et automatisations</strong>, trois produits en
+              prod.
+            </p>
+          </div>
+          <figure className="profile-portrait">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/julienlucas-b.jpeg" alt="Julien Lucas, Avignon, 2026" />
+            <figcaption>
+              <span>Julien Lucas</span>
+              <span>salut maman</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="profile-cover-foot">
+          <span>
+            j'ai laissé Claude faire le design, il s'en est pas mal sorti
+          </span>
+          <span>Scroll ↓</span>
+        </div>
+      </section>
+
+      {/* ─────────────────  I. PRESENT TENSE  ───────────────── */}
+      <section className="profile-movement profile-tone-soft" id="aujourdhui">
+        <div className="profile-inner">
+          <div className="profile-meta">
+            <span>Partie I</span>
+            <span>/</span>
+            <span>Aujourd'hui</span>
+          </div>
+          <h2 className="profile-h2">
+            Je construis des agents IA
+            <span className="profile-em">
+              , depuis un petit appart à Avignon.
+            </span>
+          </h2>
+          <div className="profile-prose">
+            <p>
+              Je suis basé dans le sud de la France. Je travaille en freelance
+              pour des entreprises qui veulent passer des démos aux solutions en
+              production — agents IA, RAG, fine-tuning de modèles. En parallèle,
+              je construis et fais tourner mes propres produits :{" "}
+              <a href="https://shootingpro.co" target="_blank" rel="noopener noreferrer">
+                <strong>shootingpro.co</strong>
+              </a>,{" "}
+              <a
+                href="https://whatsappia.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>whatsappia.co</strong>
+              </a>{" "}
+              et <strong>LeadFlow</strong>. Construits seul, de bout en bout.
+            </p>
+            <p>
+              Je passe une grosse partie de mes journées dans Cursor, Claude
+              Code, et le terminal. Le reste à lire des papiers, regarder du
+              code open-source, et tourner des vidéos pour expliquer ce que
+              j'apprends sur ma{" "}
+              <a
+                href="https://www.youtube.com/@JulienLucas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                chaîne YouTube
+              </a>
+              . Mon métier a changé deux fois en neuf ans. Je n'ai aucune raison
+              de penser que ce sera la dernière.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  CURTAIN: 2017  ───────────────── */}
+      <section className="profile-curtain profile-tone-black">
+        <div className="profile-year-number">2017</div>
+        <div className="profile-curtain-label">
+          L'année où j'ai écrit ma première ligne de React, en autodidacte
+        </div>
+      </section>
+
+      {/* ─────────────────  II. THE FIRST LINE  ───────────────── */}
+      <section className="profile-bleed profile-bleed-dark" id="parcours">
+        <div className="profile-bleed-grid">
+          <div className="profile-bleed-img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/jaimebien/IMG_7128.jpg" alt="Julien, hiver" />
+            <div className="profile-bleed-cap">
+              2018 · entre deux séssions de Claude
+            </div>
+          </div>
+          <div className="profile-bleed-txt">
+            <div className="profile-eb">Partie II / La première ligne</div>
+            <h3 className="profile-h3">
+              Pas d'école. 5ans en autodidacte en startups et équipes tech
+            </h3>
+            <p>
+              Juillet 2017. Je décide d'apprendre à coder. J'achète un cours
+              React/Redux d'Andrew Mead sur Udemy pour le prix d'un sandwich. Je
+              le finis. J'en achète un autre. Puis Node, GraphQL, Apollo,
+              Prisma, TypeScript. Cinq ans en autodidacte total — pas une salle
+              de classe, pas un mentor formel.
+            </p>
+            <p>
+              Tout ce que j'ai construit ensuite, je l'ai appris dans cet ordre
+              : un cours, un projet perso, un bug, Stack Overflow, un autre
+              cours.
+            </p>
+            <p>
+              Puis pas mal de livres sur le systeme design, les design patterns
+              et la pratique de la Clean Archtiecture.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  III. FIVE YEARS  ───────────────── */}
+      <section className="profile-movement profile-tone-paper" id="scale-ups">
+        <div className="profile-inner">
+          <div className="profile-meta">
+            <span>Partie III</span>
+            <span>/</span>
+            <span>Cinq ans à construire pour les autres</span>
+          </div>
+          <h2 className="profile-h2">
+            Cinq startups et équipes tech.{" "}
+            <span className="profile-em">
+              Intérim, telecom, épargne, e-learning
+            </span>
+          </h2>
+          <div className="profile-prose">
+            <p>
+              <strong>iziwork</strong> en 2020 — refonte du site vitrine d'une
+              scale-up de l'intérim. Première vraie équipe tech, premiers vrais
+              code-reviews. <strong>Reezocar</strong> derrière, pour construire
+              l'eCommerce d'un réseau d'agences automobiles.
+            </p>
+            <p>
+              Puis <strong>Sewan</strong>, scale-up des télécoms, équipe tech de
+              40 développeurs — le moment où j'ai compris ce que voulait dire «
+              coder en équipe » à grande échelle.{" "}
+              <strong>Corum l'Épargne</strong> ensuite : tunnels de vente
+              B2B/B2C pour des produits financiers, SCPI, assurances vie. Mes
+              tunnels les plus complexes.
+            </p>
+            <p>
+              Et fin 2022, <strong>Smartch</strong> — premier rôle de lead
+              front-end sur une plateforme e-learning complète. Cinq ans, cinq
+              boîtes. Aucune que j'avais cherchée par école, par réseau, ou par
+              hasard. Juste un dossier qui grossissait projet après projet.
+            </p>
+            <dl className="profile-tick">
+              <dt>iziwork</dt>
+              <dd>2020 — 2021</dd>
+              <dt>Reezocar</dt>
+              <dd>2021</dd>
+              <dt>Sewan</dt>
+              <dd>2021</dd>
+              <dt>Corum l'Épargne</dt>
+              <dd>2022</dd>
+              <dt>Smartch (Lead)</dt>
+              <dd>2022 — 2023</dd>
+              <dt>Total</dt>
+              <dd className="profile-accent-word">5 ans</dd>
+            </dl>
+            <p className="profile-aside">
+              J'aimais beaucoup. Mais je sentais arriver le moment où coder ne
+              serait plus suffisant.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  PULL-SPREAD  ───────────────── */}
+      <section className="profile-pull-spread profile-tone-soft">
+        <div className="profile-pull-spread-inner">
+          <div className="profile-pull-number">5</div>
+          <div>
+            <div className="profile-pull-label">
+              Cinq années avant la bascule
+            </div>
+            <div className="profile-pull-text">
+              Cinq ans à coder pour des scale-ups, en autodidacte.{" "}
+              <em>Et puis ChatGPT-4 est arrivé.</em>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  CURTAIN: NOV 2024  ───────────────── */}
+      <section className="profile-curtain profile-tone-black">
+        <div className="profile-year-number">2025</div>
+        <div className="profile-curtain-label">
+          Décembre 2024 — le moment où mon métier change, pour de bon
+        </div>
+      </section>
+
+      {/* ─────────────────  IV. THE TURNING POINT  ───────────────── */}
+      <section className="profile-bleed profile-bleed-light" id="declic">
+        <div className="profile-bleed-grid reverse">
+          <div className="profile-bleed-img">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/docchat.jpg"
-              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+              src="/jaimebien/IMG_7160.jpg"
+              alt="Coucher de soleil dans le Vaucluse"
             />
-            <CardTitle variant="h3-b" className="text-center px-6 pt-4">
-              RAG multi-agentique à forte pertinence et faible taux
-              halucinations
-            </CardTitle>
-            <Link href="/use-cases/agentic-rag" className="block mx-auto">
-              <Button variant="default" size="sm" className="mx-auto">
-                Voir le projet
-              </Button>
-            </Link>
-          </Card>
-          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
-            <img
-              src="/styleanalyer.jpg"
-              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
-            />
-            <CardTitle
-              variant="h3-b"
-              className="text-center px-6 pt-4 max-w-md mx-auto"
+            <div className="profile-bleed-cap">Vaucluse · fin 2024</div>
+          </div>
+          <div className="profile-bleed-txt">
+            <div className="profile-eb">Partie IV / Le passage à l'IA</div>
+            <h3 className="profile-h3">
+              Ce qui prenait des mois prenait des heures. Je suis passé aux
+              fondamentaux de l'IA.
+            </h3>
+            <p>
+              ChatGPT-4 explose. Je vois passer sur X des SaaS construits en un
+              weekend qui m'auraient pris six mois. Je comprends à ce moment-là
+              que ce n'est pas un outil de plus — c'est un changement de régime
+              pour le métier.
+            </p>
+            <p>
+              Je décide d'aller chercher les compétences avant que tout le monde
+              s'y mette. Je mets le freelance en pause sur le pur dev, j'attaque tous les matins des cours IA, un un
+              parcours sur l'IA qui va durer toute l'année 2025.
+            </p>
+            <p
+              className="profile-aside"
+              style={{ margin: "24px 0 0", paddingLeft: 20, fontSize: 18 }}
             >
-              MM-RAG recommandation de tenues par similarité à image uploadée
-            </CardTitle>
-            <Link href="/use-cases/mm-rag" className="block mx-auto">
-              <Button variant="default" size="sm" className="mx-auto">
-                Voir le projet
-              </Button>
-            </Link>
-          </Card>
-          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
+              « Si le métier change, soit tu changes avec, soit tu restes
+              dehors. »
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  FUNFACT: HOW I LEARNED IT  ───────────────── */}
+      <section className="profile-funfact profile-funfact-split profile-tone-mid">
+        <div className="profile-funfact-split-inner">
+          <figure className="profile-funfact-figure">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/pneumodiag.jpg"
-              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
+              src="/jaimebien/IMG_7181.jpg"
+              alt="Vue dégagée, fin de journée"
             />
-            <CardTitle
-              variant="h3-b"
-              className="text-center px-6 pt-4 max-w-sm mx-auto"
-            >
-              Diagnostiquer les pneumonies et leur degrés de viralité
-            </CardTitle>
-            <Link href="/use-cases/pneumodiag" className="block mx-auto">
-              <Button variant="default" size="sm" className="mx-auto">
-                Voir le projet
-              </Button>
-            </Link>
-          </Card>
-          <Card className="flex flex-col justify-between border border-zinc-200 rounded-lg hover:bg-zinc-50 pt-0 pb-6">
-            <img
-              src="/fakefinder.jpg"
-              alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-              className="w-full h-full object-cover rounded-tl-lg rounded-tr-lg"
-            />
-            <CardTitle
-              variant="h3-b"
-              className="text-center px-6 pt-4 max-w-md mx-auto"
-            >
-              Détecter les images fakes IA
-            </CardTitle>
-            <Link href="/use-cases/fakefinder" className="block mx-auto">
-              <Button variant="default" size="sm" className="mx-auto">
-                Voir le projet
-              </Button>
-            </Link>
-          </Card>
-        </CardContent>
-      </Card>
-      <Card
-        id="a-propos"
-        className="relative max-w-2xl w-full mx-auto md:px-8 px-2 shadow-none border-none rounded-none pb-8 border-zinc-200 border-l-0 border-r-0 border-b-0"
+            <figcaption>1 an de fondamentaux IA · 2 certifications</figcaption>
+          </figure>
+          <div className="profile-funfact-content">
+            <div className="profile-funfact-label">
+              Comment je m'y suis pris
+            </div>
+            <h3 className="profile-funfact-title">
+              Deux certifications. Une par trimestre.
+            </h3>
+            <p className="profile-funfact-body">
+              <strong>Hugging Face</strong> en février 2025 pour les
+              fondamentaux des agents. <strong>IBM</strong> en septembre pour le
+              RAG avancé, l'IA agentique et le fine-tuning de transformers —
+              deux cursus complets et des cours individuels sur 6 mois. <strong>DeepLearning.AI</strong> en
+              janvier 2026 pour PyTorch, les réseaux de neurones, NLP et
+              computer vision.
+            </p>
+            <p className="profile-funfact-body">
+              Pas de raccourci. Je voulais comprendre les modèles depuis la
+              backprop jusqu'au RAG multi-agentique, parce qu'on ne construit
+              pas en confiance ce qu'on n'a pas démonté.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  V. PRODUCTS IN PROD  ───────────────── */}
+      <section className="profile-movement profile-tone-paper" id="produits">
+        <div className="profile-inner-wide">
+          <div className="profile-meta">
+            <span>Partie V</span>
+            <span>/</span>
+            <span>Mes produits en production</span>
+          </div>
+          <h2 className="profile-h2">
+            Trois produits en prod.{" "}
+            <span className="profile-em">Construits seul, de A à Z.</span>
+          </h2>
+          <div className="profile-books-grid">
+            <article className="profile-book">
+              <div className="profile-book-cover profile-book-cover-3">
+                <div className="profile-book-cover-num">Produit Un · 2025</div>
+                <h4 className="profile-book-cover-name">
+                  Shooting
+                  <br />
+                  pro<span style={{ color: "#FDC9D6" }}>.</span>
+                </h4>
+                <div className="profile-book-cover-foot">
+                  <span>shootingpro.co</span>
+                  <span>En prod</span>
+                </div>
+              </div>
+              <div className="profile-book-tag">
+                <span>Produit Un</span>
+                <span>·</span>
+                <span>2025</span>
+              </div>
+              <h3 className="profile-book-title">
+                <a
+                  href="https://shootingpro.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Shootingpro.co
+                </a>
+              </h3>
+              <p className="profile-book-tagline">
+                Tes portraits pro, générés par IA. Sans shooting.
+              </p>
+              <div className="profile-book-body">
+                <p>
+                  Application IA de portraits ultra-réalistes basée sur les
+                  modèles Flux. L'utilisateur upload quelques selfies et reçoit
+                  une série de portraits professionnels — LinkedIn, CV, presse —
+                  en quelques minutes.
+                </p>
+                <p>
+                  Stack : Flux (LoRA fine-tuning), pipeline d'inférence GPU,
+                  Next.js, Stripe. Mon premier produit IA, lancé en septembre.
+                </p>
+              </div>
+              <p className="profile-book-aside">
+                C'est ce projet qui m'a appris la rigueur du fine-tuning de
+                modèles d'images et la gestion d'inférence GPU à coût maîtrisé.
+              </p>
+            </article>
+
+            <article className="profile-book">
+              <div className="profile-book-cover profile-book-cover-1">
+                <div className="profile-book-cover-num">
+                  Produit Deux · 2026
+                </div>
+                <h4 className="profile-book-cover-name">
+                  Whatsapp
+                  <br />
+                  IA<span style={{ color: "var(--accent-light)" }}>.</span>
+                </h4>
+                <div className="profile-book-cover-foot">
+                  <span>whatsappia.co</span>
+                  <span>En prod</span>
+                </div>
+              </div>
+              <div className="profile-book-tag">
+                <span>Produit Deux</span>
+                <span>·</span>
+                <span>2026</span>
+              </div>
+              <h3 className="profile-book-title">
+                <a
+                  href="https://whatsappia.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Whatsappia.co
+                </a>
+              </h3>
+              <p className="profile-book-tagline">
+                L'agent ne vend pas le produit. Il vend le rendez-vous.
+              </p>
+              <div className="profile-book-body">
+                <p>
+                  Un agent IA branché sur l'API WhatsApp Cloud qui qualifie les
+                  leads entrants 24/7, gère les objections, et pose le RDV
+                  directement dans le calendrier du commercial. Intégrations
+                  Cal.com, Calendly, HubSpot, Pipedrive.
+                </p>
+                <p>
+                  Stack : Anthropic + Mistral, Django, React, Supabase, Stripe,
+                  Resend. Construit seul, fondateur et seul ingénieur à bord.
+                </p>
+              </div>
+              <p className="profile-book-aside">
+                Premier produit IA que je laisse en prod 24/7. La discipline de
+                l'observabilité change tout.
+              </p>
+            </article>
+
+            <article className="profile-book">
+              <div className="profile-book-cover profile-book-cover-2">
+                <div className="profile-book-cover-num">
+                  Produit Trois · 2026
+                </div>
+                <h4 className="profile-book-cover-name">
+                  Lead
+                  <br />
+                  Flow<span style={{ color: "var(--accent)" }}>.</span>
+                </h4>
+                <div className="profile-book-cover-foot">
+                  <span>Cold email IA</span>
+                  <span>En prod</span>
+                </div>
+              </div>
+              <div className="profile-book-tag">
+                <span>Produit Trois</span>
+                <span>·</span>
+                <span>2026</span>
+              </div>
+              <h3 className="profile-book-title">LeadFlow.</h3>
+              <p className="profile-book-tagline">
+                De la requête au mail envoyé en quelques minutes.
+              </p>
+              <div className="profile-book-body">
+                <p>
+                  Recherche de prospects via Google Maps et Apify,
+                  enrichissement automatique, génération de cold emails
+                  personnalisés avec Claude, envoi via Resend. Pipeline
+                  asynchrone Celery + Redis.
+                </p>
+                <p>
+                  Stack : Anthropic, Apify, Django, Celery, Resend, React, Vite.
+                  Pensé pour les TPE/PME qui n'ont pas de SDR mais qui ont
+                  besoin de remplir un pipeline.
+                </p>
+              </div>
+              <p className="profile-book-aside">
+                Le projet où j'ai vraiment compris que la qualité du prompt et
+                la qualité de la donnée comptaient plus que le modèle.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  VI. POCS / CASE STUDIES  ───────────────── */}
+      <section
+        className="profile-movement profile-tone-soft profile-no-dropcap"
+        id="pocs"
       >
-        <CardHeader>
-          <CardTitle variant="h3-card">Expériences professionnelles</CardTitle>
-        </CardHeader>
-        <CardContent className="px-6 pb-6 max-w-xl">
-          <div className="relative">
-            <div className="absolute left-[11px] top-0 bottom-0 w-[1px] bg-zinc-200"></div>
-            <div className="space-y-8">
-              <div className="relative flex items-start gap-6">
-                {/* <div className="relative z-10 w-5 h-5 rounded-full bg-[#3534af] border-4 border-white flex-shrink-0"></div> */}
-                <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/shootingpro.jpeg"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">
-                    Sept 2025 - Aujourd'hui
-                  </div>
-                  <div className="font-bold text-lg">
-                    Shootingpro.co - Fondateur / AI Engineer
-                  </div>
-                  <p>
-                    Application IA de portraits ultra-réalistes avec les modèles
-                    Flux.
-                  </p>
+        <div className="profile-inner-wide">
+          <div className="profile-meta">
+            <span>Partie VI</span>
+            <span>/</span>
+            <span>Études de cas</span>
+          </div>
+          <h2 className="profile-h2">
+            Quatre POCs.{" "}
+            <span className="profile-em">
+              Pour comprendre, pas pour vendre.
+            </span>
+          </h2>
+          <div className="profile-prose" style={{ maxWidth: 640 }}>
+            <p>
+              À côté des produits en prod, je construis des prototypes pour
+              tester une technique IA précise. Aucun n'a vocation à devenir un
+              produit. Tous m'ont appris quelque chose.
+            </p>
+          </div>
+          <div className="poc-list">
+            <a href="/use-cases/agentic-rag" className="poc-list-item">
+              <span className="poc-list-num">No. 01 · RAG</span>
+              <h3 className="poc-list-title">
+                RAG multi-agentique pour docs techniques
+              </h3>
+              <span className="poc-list-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="/use-cases/mm-rag" className="poc-list-item">
+              <span className="poc-list-num">No. 02 · Multimodal</span>
+              <h3 className="poc-list-title">
+                MM-RAG : recommandation de tenues par image
+              </h3>
+              <span className="poc-list-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="/use-cases/pneumodiag" className="poc-list-item">
+              <span className="poc-list-num">No. 03 · Vision</span>
+              <h3 className="poc-list-title">
+                Diagnostic de pneumonies depuis une radio
+              </h3>
+              <span className="poc-list-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a href="/use-cases/fakefinder" className="poc-list-item">
+              <span className="poc-list-num">No. 04 · Deepfake</span>
+              <h3 className="poc-list-title">
+                Détecter les images IA (Nano Banana, Flux, Midjourney)
+              </h3>
+              <span className="poc-list-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  VII. YOUTUBE  ───────────────── */}
+      <section
+        className="profile-movement profile-tone-paper profile-no-dropcap"
+        id="youtube"
+      >
+        <div className="profile-inner-wide">
+          <div className="profile-meta">
+            <span>Partie VII</span>
+            <span>/</span>
+            <span>Sur YouTube</span>
+          </div>
+          <h2 className="profile-h2">
+            Je vulgarise l'IA en français.{" "}
+            <span className="profile-em">
+              Ce que j'apprends, pendant que je l'apprends.
+            </span>
+          </h2>
+          <div
+            className="profile-prose"
+            style={{ maxWidth: 640, marginBottom: 8 }}
+          >
+            <p>
+              Une vidéo par semaine, parfois deux. Cours que je recommande,
+              techniques que je teste, modèles que je démonte. Aucun script
+              écrit par GPT.
+            </p>
+          </div>
+          <YoutubeFeed />
+          <div style={{ marginTop: 32 }}>
+            <a
+              href="https://www.youtube.com/@JulienLucas"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--mono)",
+                fontSize: 12,
+                letterSpacing: ".2em",
+                textTransform: "uppercase",
+                fontWeight: 700,
+              }}
+            >
+              S'abonner à la chaîne →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────────  VIII. THINGS I LIKE  ───────────────── */}
+      <section
+        className="profile-movement profile-tone-deep profile-no-dropcap"
+        id="stack"
+      >
+        <div className="profile-inner">
+          <div className="profile-meta">
+            <span>Partie VIII</span>
+            <span>/</span>
+            <span>Ce que je ramène constamment</span>
+          </div>
+          <h2 className="profile-h2">
+            Le stuff dont je n'arrête pas{" "}
+            <span className="profile-em">de parler dans les vidéos.</span>
+          </h2>
+          <div className="profile-prose" style={{ marginBottom: 0 }}>
+            <p>
+              La meilleure façon de me cerner, c'est de regarder ce qui revient
+              tout le temps. Sans ordre particulier.
+            </p>
+          </div>
+          <div className="profile-favs">
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 01 / Stack</div>
+              <div>
+                <div className="profile-fav-name">
+                  Claude Code, Cursor, Anthropic API
+                </div>
+                <div className="profile-fav-desc">
+                  Mon environnement de tous les jours. Je code et je débogue
+                  presque tout avec Claude Sonnet et Opus.
                 </div>
               </div>
-              <div className="relative flex items-start gap-6">
-                <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/smartch.jpeg"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">
-                    2022 - 2023
-                  </div>
-                  <div className="font-bold text-lg">
-                    Lead développeur front-end chez Smartch
-                  </div>
-                  <p>
-                    Reprise en main de l'application front-end complet d'une
-                    plateforme elearning.
-                  </p>
+            </div>
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 02 / Frameworks</div>
+              <div>
+                <div className="profile-fav-name">Django + Next.js</div>
+                <div className="profile-fav-desc">
+                  Couple stable et productif pour mes produits IA. Django pour
+                  le backend asynchrone, Next pour le front éditorial.
                 </div>
               </div>
-              <div className="relative flex items-start gap-6">
-                <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/corum.svg"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-contain p-0.5"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">2022</div>
-                  <div className="font-bold text-lg">
-                    Développeur front-end chez Corum l'Épargne
-                  </div>
-                  <p>
-                    Développements de tunnels de vente B2B/B2C de produits
-                    d'épargne, SCPI, assurances vie.
-                  </p>
+            </div>
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 03 / Modèles</div>
+              <div>
+                <div className="profile-fav-name">
+                  Claude Sonnet, Mistral, Flux
+                </div>
+                <div className="profile-fav-desc">
+                  Sonnet pour la qualif et le code, Mistral pour le coût, Flux
+                  pour la génération d'images sur Shootingpro.co.
                 </div>
               </div>
-              <div className="relative flex items-start gap-6">
-                <Card className="-ml-1 bg-white border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/sewan.png"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-contain p-0.5"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">2021</div>
-                  <div className="font-bold text-lg">
-                    Software engineer front-end chez Sewan
-                  </div>
-                  <p>
-                    Participation à la refonte complète du SaaS de Sewan,
-                    scale-up dans les télécoms, au sein de l'équipe tech de 40
-                    développeurs.
-                  </p>
+            </div>
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 04 / Apprentissage</div>
+              <div>
+                <div className="profile-fav-name">
+                  DeepLearning.AI, IBM, Hugging Face
+                </div>
+                <div className="profile-fav-desc">
+                  Trois plateformes qui valent largement n'importe quel bootcamp
+                  à 8 000&nbsp;€.
                 </div>
               </div>
-              <div className="relative flex items-start gap-6">
-                <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/reezocar.png"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">2021</div>
-                  <div className="font-bold text-lg">
-                    Développeur front-end chez Reezocar
-                  </div>
-                  <p>
-                    Création du site eCommerce pour un réseau d'agences de vente
-                    de véhicules.
-                  </p>
+            </div>
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 05 / Outils</div>
+              <div>
+                <div className="profile-fav-name">LangSmith, Apify, Resend</div>
+                <div className="profile-fav-desc">
+                  Observabilité des agents, scraping, envoi d'emails. La triade
+                  de mes pipelines en prod.
                 </div>
               </div>
-              <div className="relative flex items-start gap-6">
-                <Card className="-ml-1 border-zinc-200 border w-8 h-8 rounded-full overflow-hidden relative">
-                  <Image
-                    src="/iziwork.jpg"
-                    alt="AI Engineer freelance, développeur agents IA, développeur automatisations IA, Agent IA entreprise, Consultant IA, Consultant RAG"
-                    fill
-                    className="object-cover"
-                  />
-                </Card>
-                <div className="flex-1 pt-0.5">
-                  <div className="text-sm text-zinc-500 italic">
-                    2020 - 2021
-                  </div>
-                  <div className="font-bold text-lg">
-                    Développeur full-stack chez iziwork
-                  </div>
-                  <p>Multiples missions pour la refonte du site vitrine.</p>
+            </div>
+            <div className="profile-fav-cell">
+              <div className="profile-fav-num">No. 06 / Lieu</div>
+              <div>
+                <div className="profile-fav-name">Avignon, Vaucluse</div>
+                <div className="profile-fav-desc">
+                  Sud, soleil, calme. Je n'arrive plus à coder dans une
+                  open-space depuis quatre ans.
                 </div>
               </div>
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
 
-      {/* FAQ */}
-      <Card
-        id="questions"
-        className="relative md:px-8 px-2 border rounded-none pb-8 border border-zinc-200 border-l-0 border-r-0 border-b-0"
-      >
-        <CardHeader>
-          <CardTitle variant="h3-card">Questions réponses</CardTitle>
-        </CardHeader>
-        <Accordion
-          type="multiple"
-          defaultValue={["item-1", "item-2", "item-3", "item-4", "item-5"]}
-          className="w-full px-6"
-        >
-          <AccordionItem value="item-1">
-            <AccordionTrigger>
-              Quelle est votre expertise en Intelligence Artificielle ?
-            </AccordionTrigger>
-            <AccordionContent>
-              <p>
-                Académique et IA appliquée concrête. Avec une approche de
-                l'entraînement IA centré sur la rigueur de la donnée. J'ai
-                développé une spécialité en IA agentique, RAG et apprentissage
-                profond en NLP et Computer Vision dans les réseaux neuronaux
-                convolutifs.
-                <br /> Ceci avec la panoplies des techniques de finetuning de
-                modèles.
-                <br />
-                Et l'optimisation des coûts et de la latence des modèles, et les
-                entraînements de modèles.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-2">
-            <AccordionTrigger>
-              Quelles services IA proposez-vous ?
-            </AccordionTrigger>
-            <AccordionContent>
-              <p>
-                Développement d'agents, de la NLP, de la computer vision et des
-                modèles IA finetunés et optimisés pour vos cas d'usages. Le tout
-                avec des interfaces front-end soignées.
-                <br />
-                <br />
-                Services :
-              </p>
-              <ul className="list-disc pl-5 pt-2">
-                <li>POC</li>
-                <li>Développement IA</li>
-                <li>Audits et consulting</li>
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
-      </Card>
-
-      {/* Contact Form */}
-      <Card
+      {/* ─────────────────  IX. LINKEDIN OUTRO  ───────────────── */}
+      <section
+        className="profile-movement profile-tone-deep profile-cta-section profile-no-dropcap"
         id="contact"
-        className="relative md:px-8 px-1 border rounded-none mt-6 py-2 pb-8 border-none"
       >
-        <CardContent className="max-w-3xl mx-auto">
-          <ContactForm />
-        </CardContent>
-      </Card>
-    </main>
+        <div className="profile-inner-wide">
+          <div className="profile-meta">
+            <span>Partie IX</span>
+            <span>/</span>
+            <span>Restons en contact</span>
+          </div>
+          <h2 className="profile-h2">
+            On se retrouve sur LinkedIn.{" "}
+            <span className="profile-em">C'est là que j'écris.</span>
+          </h2>
+
+          <div className="li-bill">
+            <div className="li-bill-num">
+              13K<sup>+ abonnés</sup>
+            </div>
+            <div className="li-bill-right">
+              <span className="li-bill-eyebrow">in / julien-lucas-jl</span>
+              <h3 className="li-bill-h">
+                1 à 2 posts par semaine.{" "}
+                <em>Tout ce que j'apprends, pendant que je l'apprends.</em>
+              </h3>
+              <p className="li-bill-body">
+                Recaps de papiers récents en français, techniques RAG / agents /
+                fine-tuning que je teste sur mes produits, et coulisses de
+                Whatsapp&nbsp;IA et LeadFlow en prod. Si l'IA appliquée
+                t'intéresse, c'est l'endroit.
+              </p>
+              <div className="li-bill-tags">
+                <span>Recaps de papiers</span>
+                <span>RAG</span>
+                <span>Agents IA</span>
+                <span>Fine-tuning</span>
+                <span>Coulisses produits</span>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/julien-lucas-jl/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="li-bill-cta"
+              >
+                <span>Voir mon LinkedIn</span>
+                <span className="li-bill-cta-arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

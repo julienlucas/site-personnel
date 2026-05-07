@@ -2,26 +2,35 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav className="relative border-b border-zinc-200 z-30">
-      <div className="mx-auto max-w-[1100px] px-7 py-4 md:px-0">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-lg font-medium tracking-tight">
-            Julien Lucas
-          </Link>
-          <div className="flex gap-3 uppercase" style={{ fontFamily: "'IBM Plex Mono', monospace" }}>
-            <Link href="#a-propos" className="text-sm uppercase font-semibold border border-zinc-200 tracking-tight w-fit px-4 py-[.02rem] leading-8">
-              À propos/Parcours
-            </Link>
-            <Link href="#questions" className="text-sm uppercase font-semibold border border-zinc-200 tracking-tight w-fit px-4 py-[.02rem] leading-8">
-              Questions
-            </Link>
-            <Link href="#contact" className="text-sm uppercase font-semibold tracking-tight bg-black text-white w-fit px-4 py-[.02rem] leading-8">
-              Contact
-            </Link>
-          </div>
+    <nav className="site-nav">
+      <div className="nav-inner">
+        <Link href="/" className="nav-logo">
+          <img
+            src="/julienlucas-b.jpeg"
+            alt="Julien Lucas"
+            className="nav-avatar"
+            width={28}
+            height={28}
+          />
+          <span className="nav-logo-text">
+            julienlucas<span className="dot">.</span>com
+          </span>
+        </Link>
+        <div className="nav-links">
+          <span className="nav-slash" aria-hidden="true">/</span>
+          <Link href="#cover" className="active">Home</Link>
+          <span className="nav-slash" aria-hidden="true">/</span>
+          <Link href="#produits">Projets</Link>
+          <span className="nav-slash" aria-hidden="true">/</span>
+          <Link href="#parcours">Parcours</Link>
+          <span className="nav-slash" aria-hidden="true">/</span>
+          <a href="https://www.youtube.com/@JulienLucas" target="_blank" rel="noopener noreferrer">
+            YouTube
+          </a>
+          <span className="nav-slash" aria-hidden="true">/</span>
+          <Link href="#contact">Contact</Link>
         </div>
       </div>
     </nav>
   );
 }
-
