@@ -109,7 +109,7 @@ export default function Home() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/jaimebien/IMG_7128.jpg" alt="Julien, hiver" />
             <div className="profile-bleed-cap">
-              2018 · entre deux séssions de Claude
+              2026 · entre deux séssions de Claude
             </div>
           </div>
           <div className="profile-bleed-txt">
@@ -214,7 +214,7 @@ export default function Home() {
       <section className="profile-curtain profile-tone-black">
         <div className="profile-year-number">2025</div>
         <div className="profile-curtain-label">
-          Décembre 2024 — le moment où mon métier change, pour de bon
+          Novembre 2025 — le métier a changé, pour de bon
         </div>
       </section>
 
