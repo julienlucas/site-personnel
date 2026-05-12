@@ -97,7 +97,7 @@ export default function AgenticRagPage() {
               global de pertinence correct, mais pas encore excellent.
             </li>
             <li>
-              <em>0 % d'hallucination</em> grâce au reranker — à valider sur
+              <em>2-5 % d'hallucinations</em> grâce au reranker — à valider sur
               une plus large quantité de données.
             </li>
             <li>
