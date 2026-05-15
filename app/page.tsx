@@ -16,7 +16,7 @@ export default function Home() {
             <div className="profile-eyebrow">Faisons connaissance</div>
             <h1 className="profile-h1">
               <span>Julien</span>
-              <span>Lucas.</span>
+              <span style={{ color: "var(--accent)" }}>Lucas.</span>
             </h1>
             <p className="profile-tagline">
               Cinq ans à coder pour des startups, sans école. Fin 2024,
@@ -63,9 +63,14 @@ export default function Home() {
               pour des entreprises qui veulent passer des démos aux solutions en
               production — agents IA, RAG, fine-tuning de modèles. En parallèle,
               je construis et fais tourner mes propres produits :{" "}
-              <a href="https://shootingpro.co" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://shootingpro.co"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <strong>shootingpro.co</strong>
-              </a>,{" "}
+              </a>
+              ,{" "}
               <a
                 href="https://whatsappia.co"
                 target="_blank"
@@ -243,8 +248,9 @@ export default function Home() {
             </p>
             <p>
               Je décide d'aller chercher les compétences avant que tout le monde
-              s'y mette. Je mets le freelance en pause sur le pur dev, j'attaque tous les matins des cours IA, un un
-              parcours sur l'IA qui va durer toute l'année 2025.
+              s'y mette. Je mets le freelance en pause sur le pur dev, j'attaque
+              tous les matins des cours IA, un un parcours sur l'IA qui va durer
+              toute l'année 2025.
             </p>
             <p
               className="profile-aside"
@@ -279,9 +285,9 @@ export default function Home() {
               <strong>Hugging Face</strong> en février 2025 pour les
               fondamentaux des agents. <strong>IBM</strong> en septembre pour le
               RAG avancé, l'IA agentique et le fine-tuning de transformers —
-              deux cursus complets et des cours individuels sur 6 mois. <strong>DeepLearning.AI</strong> en
-              janvier 2026 pour PyTorch, les réseaux de neurones, NLP et
-              computer vision.
+              deux cursus complets et des cours individuels sur 6 mois.{" "}
+              <strong>DeepLearning.AI</strong> en janvier 2026 pour PyTorch, les
+              réseaux de neurones, NLP et computer vision.
             </p>
             <p className="profile-funfact-body">
               Pas de raccourci. Je voulais comprendre les modèles depuis la
@@ -423,7 +429,13 @@ export default function Home() {
                 <span>·</span>
                 <span>2026</span>
               </div>
-              <h3 className="profile-book-title">LeadFlow.</h3>
+              <a
+                href="https://deepagenticai.co/leadflow-prospection-email-automatisee"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <h3 className="profile-book-title">LeadFlow.</h3>
+              </a>
               <p className="profile-book-tagline">
                 De la requête au mail envoyé en quelques minutes.
               </p>
