@@ -108,12 +108,13 @@ nav.site-nav {
   backdrop-filter: blur(8px);
 }
 .nav-inner {
-  max-width: 720px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
 }
 .nav-logo {
   font-family: var(--font-sora), "Sora", system-ui, sans-serif;

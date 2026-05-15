@@ -21,6 +21,14 @@ export default function SiteFooter() {
           </a>
           <span className="footer-slash" aria-hidden="true">/</span>
           <a
+            href="https://github.com/julienlucas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <span className="footer-slash" aria-hidden="true">/</span>
+          <a
             href="https://whatsappia.co"
             target="_blank"
             rel="noopener noreferrer"
