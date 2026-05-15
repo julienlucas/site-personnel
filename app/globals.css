@@ -181,14 +181,21 @@ nav.site-nav {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: clamp(40px, 5vw, 80px);
-  align-items: center;
-  padding: 32px 0;
+  align-items: stretch;
+  padding: 32px 0 32px;
   min-width: 0;
   max-width: 100%;
   margin: 0 auto;
   width: 100%;
+  height: 100%;
 }
-.profile-cover-title { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
+.profile-cover-title {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-width: 0;
+  justify-content: center;
+}
 .profile-cover-foot {
   font-family: var(--font-sora), "Sora", system-ui, sans-serif;
   font-size: 11px;
@@ -213,7 +220,7 @@ nav.site-nav {
 .profile-h1 {
   font-family: var(--font-sora), "Sora", system-ui, sans-serif;
   font-weight: 800;
-  font-size: clamp(68px, 13vw, 220px);
+  font-size: clamp(52px, 8vw, 140px);
   line-height: .9;
   letter-spacing: -.04em;
   color: var(--p-ink);
@@ -234,6 +241,28 @@ nav.site-nav {
 }
 .profile-tagline em { font-style: normal; color: var(--accent); font-weight: 500; }
 .profile-tagline strong { color: var(--accent); font-weight: 700; }
+
+.profile-cover-pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.profile-cover-pill {
+  font-family: var(--font-sora), "Sora", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--p-ink);
+  background: transparent;
+  border: 1px solid var(--p-ink);
+  border-radius: 4px;
+  padding: 8px 14px;
+  line-height: 1;
+  white-space: nowrap;
+}
 
 .profile-portrait {
   position: relative;

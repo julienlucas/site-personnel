@@ -18,6 +18,15 @@ export default function Home() {
               <span>Julien</span>
               <span style={{ color: "var(--accent)" }}>Lucas.</span>
             </h1>
+            <ul className="profile-cover-pills">
+              <li className="profile-cover-pill">Applied AI Engineer</li>
+              <li className="profile-cover-pill">
+                Développeur 5 ans en équipes tech
+              </li>
+              <li className="profile-cover-pill">
+                Créateur d'offres sur DeepAgenticAI
+              </li>
+            </ul>
             <p className="profile-tagline">
               Cinq ans à coder pour des startups, sans école. Fin 2024,
               ChatGPT-4 a tout fait basculer. Aujourd'hui je construis des{" "}
@@ -52,7 +61,7 @@ export default function Home() {
             <span>Aujourd'hui</span>
           </div>
           <h2 className="profile-h2">
-            Je construis des agents IA
+            Je construis des infrastructures IA
             <span className="profile-em">
               , depuis un petit appart à Avignon.
             </span>
