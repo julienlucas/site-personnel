@@ -14,16 +14,32 @@ const products: Product[] = [
     tagline: "Agent IA de qualification commerciale sur WhatsApp",
     description:
       "L'agent ne vend pas le produit — il vend le rendez-vous. Il qualifie les leads entrants 24/7, gère les objections, et pose le RDV directement dans le calendrier. Intégration Cal.com, Calendly, HubSpot, Pipedrive.",
-    stack: ["Anthropic", "Mistral", "Django", "React", "Supabase", "Stripe", "WhatsApp Cloud API"],
+    stack: [
+      "Anthropic",
+      "Mistral",
+      "Django",
+      "React",
+      "Supabase",
+      "Stripe",
+      "WhatsApp Cloud API",
+    ],
     status: "prod",
   },
   {
     name: "LeadFlow",
-    url: "#",
+    url: "https://deepagenticai.co/leadflow-prospection-email-automatisee",
     tagline: "Génération de leads qualifiés + cold email IA",
     description:
       "Recherche de prospects via Google Maps et Apify, enrichissement automatique, génération d'emails personnalisés avec Claude, et envoi via Resend. De la requête au mail envoyé en quelques minutes.",
-    stack: ["Anthropic", "Apify", "Django", "Celery", "Resend", "React", "Vite"],
+    stack: [
+      "Anthropic",
+      "Apify",
+      "Django",
+      "Celery",
+      "Resend",
+      "React",
+      "Vite",
+    ],
     status: "prod",
   },
 ];
