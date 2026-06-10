@@ -87,7 +87,15 @@ export default function Home() {
               >
                 <strong>whatsappia.co</strong>
               </a>{" "}
-              et <strong>LeadFlow</strong>. Construits seul, de bout en bout.
+              et
+              <a
+                href="https://prospable.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <strong>prospable.com</strong>.
+              </a>
+              Construits seul, de bout en bout.
             </p>
             <p>
               Je passe une grosse partie de mes journées dans Cursor, Claude
@@ -348,7 +356,7 @@ export default function Home() {
                 </a>
               </h3>
               <p className="profile-book-tagline">
-                Tes portraits pro, générés par IA. Sans shooting.
+                Vos portraits IA pro générés par IA. Des poses, environnements et tenues comme avec un vrai photographe pro.
               </p>
               <div className="profile-book-body">
                 <p>
@@ -364,7 +372,7 @@ export default function Home() {
               </div>
               <p className="profile-book-aside">
                 C'est ce projet qui m'a appris la rigueur du fine-tuning de
-                modèles d'images et la gestion d'inférence GPU à coût maîtrisé.
+                modèles d'images Flux et les LoRA qu'on peut injecter pour changer le rendu des images.
               </p>
             </article>
 
@@ -398,7 +406,7 @@ export default function Home() {
                 </a>
               </h3>
               <p className="profile-book-tagline">
-                L'agent ne vend pas le produit. Il vend le rendez-vous.
+                L'agent de qualification et setting sur WhatsApp pour closer vos leads
               </p>
               <div className="profile-book-body">
                 <p>
@@ -424,9 +432,7 @@ export default function Home() {
                   Produit Trois · 2026
                 </div>
                 <h4 className="profile-book-cover-name">
-                  Lead
-                  <br />
-                  Flow<span style={{ color: "var(--accent)" }}>.</span>
+                  Prospable<span style={{ color: "var(--accent)" }}>.</span>
                 </h4>
                 <div className="profile-book-cover-foot">
                   <span>Cold email IA</span>
@@ -439,26 +445,26 @@ export default function Home() {
                 <span>2026</span>
               </div>
               <a
-                href="https://deepagenticai.co/leadflow-prospection-email-automatisee"
+                href="https://prospable.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <h3 className="profile-book-title">LeadFlow.</h3>
+                <h3 className="profile-book-title">Prospable.</h3>
               </a>
               <p className="profile-book-tagline">
-                De la requête au mail envoyé en quelques minutes.
+                600, 1000 ou jusqu'à 1000 leads qualifiés Linkedin/mois et 100-300 emails/jour en automatique
               </p>
               <div className="profile-book-body">
                 <p>
-                  Recherche de prospects via Google Maps et Apify,
+                  Recherche de prospects via scrapping de signaux d'intention Linkedin,
                   enrichissement automatique, génération de cold emails
-                  personnalisés avec Claude, envoi via Resend. Pipeline
+                  contextualisés avec Claude selon les signaux d'intentions détectés, chauffage continue des boîtes mail envoi via Instantly.ai. Pipeline
                   asynchrone Celery + Redis.
                 </p>
                 <p>
                   Stack : Anthropic, Apify, Django, Celery, Resend, React, Vite.
                   Pensé pour les TPE/PME qui n'ont pas de SDR mais qui ont
-                  besoin de remplir un pipeline.
+                  d'une système outbound fiable et de volume remplir un pipeline de prospects tous les jours.
                 </p>
               </div>
               <p className="profile-book-aside">
@@ -703,7 +709,7 @@ export default function Home() {
               <p className="li-bill-body">
                 Recaps de papiers récents en français, techniques RAG / agents /
                 fine-tuning que je teste sur mes produits, et coulisses de
-                Whatsapp&nbsp;IA et LeadFlow en prod. Si l'IA appliquée
+                Whatsapp&nbsp;IA et Prospable en prod. Si l'IA appliquée
                 t'intéresse, c'est l'endroit.
               </p>
               <div className="li-bill-tags">

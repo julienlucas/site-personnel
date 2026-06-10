@@ -3,6 +3,7 @@ import { Sora, Space_Mono } from "next/font/google";
 import Navigation from "./components/ui/navigation";
 import SideNav from "./components/ui/side-nav";
 import SiteFooter from "./components/ui/site-footer";
+import SmoothScroll from "./components/smooth-scroll";
 import Script from "next/script";
 import "./globals.css";
 
@@ -52,10 +53,12 @@ export default function RootLayout({
           }}
           strategy="afterInteractive"
         />
-        <Navigation />
-        <SideNav />
-        <main>{children}</main>
-        <SiteFooter />
+        <SmoothScroll>
+          <Navigation />
+          <SideNav />
+          <main>{children}</main>
+          <SiteFooter />
+        </SmoothScroll>
       </body>
     </html>
   );
