@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
+  const pathname = usePathname();
+  // /links is a standalone Linktree page — no site chrome.
+  if (pathname?.startsWith("/links")) return null;
+
   return (
     <nav className="site-nav">
       <div className="nav-inner">

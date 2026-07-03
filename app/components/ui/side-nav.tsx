@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 interface Item {
@@ -32,6 +33,7 @@ function isDarkSection(el: Element): boolean {
 }
 
 export default function SideNav() {
+  const pathname = usePathname();
   const [activeId, setActiveId] = useState<string>(items[0].id);
   const [tone, setTone] = useState<"light" | "dark">("light");
   const [hidden, setHidden] = useState<boolean>(false);
@@ -106,6 +108,9 @@ export default function SideNav() {
       window.removeEventListener("resize", compute);
     };
   }, []);
+
+  // The sidenav tracks the homepage's narrative sections only.
+  if (pathname !== "/") return null;
 
   return (
     <nav

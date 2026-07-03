@@ -1,4 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function SiteFooter() {
+  const pathname = usePathname();
+  // /links is a standalone Linktree page — no site chrome.
+  if (pathname?.startsWith("/links")) return null;
+
   return (
     <footer className="site-footer">
       <div className="container">
