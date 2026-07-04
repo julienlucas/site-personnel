@@ -48,7 +48,7 @@ export default function LinksPage() {
             "classique" dans des startups et équipes tech après déjà une 1ère
             reconversion. C'est la 2ème donc (ou peut-être la 3ème finalement,
             longue histoire...) Aujourd'hui je construis des systèmes IA et je
-            veux aider les entreprenants et entrepreneurs à développer leur
+            veux aider les entreprenants à développer leur
             boîte et se libérer avec l'IA depuis le sud de la France ☀️
           </p>
           <nav className="lk-socials" aria-label="Réseaux sociaux">
