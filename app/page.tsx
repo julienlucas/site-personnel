@@ -384,7 +384,7 @@ export default function Home() {
                   Produit Deux · 2026
                 </div>
                 <h4 className="profile-book-cover-name">
-                  CloseChat
+                  Closechat
                   <br />
                   IA<span style={{ color: "var(--accent-light)" }}>.</span>
                 </h4>
@@ -715,7 +715,7 @@ export default function Home() {
               <p className="li-bill-body">
                 Recaps de papiers récents en français, techniques RAG / agents /
                 fine-tuning que je teste sur mes produits, et coulisses de
-                CloseChat et Prospable en prod. Si l'IA appliquée
+                Closechat et Prospable en prod. Si l'IA appliquée
                 t'intéresse, c'est l'endroit.
               </p>
               <div className="li-bill-tags">
